@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Learning_Site.Data.Migrations
+namespace Learning_Site.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230128205835_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20230129191453_Init")]
+    partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -98,16 +98,24 @@ namespace Learning_Site.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("SiteUserID")
-                        .IsRequired()
+                    b.Property<string>("SiteUserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("SiteDictionaryId");
 
-                    b.HasIndex("SiteUserID")
-                        .IsUnique();
+                    b.HasIndex("SiteUserId")
+                        .IsUnique()
+                        .HasFilter("[SiteUserId] IS NOT NULL");
 
                     b.ToTable("SiteDictionary");
+
+                    b.HasData(
+                        new
+                        {
+                            SiteDictionaryId = 1,
+                            Name = "AdminDictionary",
+                            SiteUserId = "32350725-439a-4b52-a2c4-181287146cbc"
+                        });
                 });
 
             modelBuilder.Entity("Learning_Site.Models.Entities.SiteNote", b =>
@@ -157,6 +165,22 @@ namespace Learning_Site.Data.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "5c9d18af-ae43-49e3-a698-d284d4ff03c2",
+                            ConcurrencyStamp = "5c9d18af-ae43-49e3-a698-d284d4ff03c2",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = "73329a1f-ccb8-4902-b254-574617713ad8",
+                            ConcurrencyStamp = "73329a1f-ccb8-4902-b254-574617713ad8",
+                            Name = "DefaultUser",
+                            NormalizedName = "DEFAULTUSER"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -317,6 +341,13 @@ namespace Learning_Site.Data.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "32350725-439a-4b52-a2c4-181287146cbc",
+                            RoleId = "5c9d18af-ae43-49e3-a698-d284d4ff03c2"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -345,6 +376,23 @@ namespace Learning_Site.Data.Migrations
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
                     b.HasDiscriminator().HasValue("SiteUser");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "32350725-439a-4b52-a2c4-181287146cbc",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "1eec6a27-accf-4ad8-bb83-9846aace6ae1",
+                            Email = "Admin@gmail.com",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedUserName = "ADMIN",
+                            PasswordHash = "AQAAAAEAACcQAAAAEKLoMbG6jkxSH81qS3WgNIOkkfFrQ/nAIXHemj4XniDI0aoYNVTEviMqtmNhqhBy0w==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "081d84ec-6fdd-4569-be26-b98b6e2fcd3a",
+                            TwoFactorEnabled = false,
+                            UserName = "Admin"
+                        });
                 });
 
             modelBuilder.Entity("CourseSiteUser", b =>
@@ -377,9 +425,7 @@ namespace Learning_Site.Data.Migrations
                 {
                     b.HasOne("Learning_Site.Models.Entities.SiteUser", "SiteUser")
                         .WithOne("SiteDictionary")
-                        .HasForeignKey("Learning_Site.Models.Entities.SiteDictionary", "SiteUserID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("Learning_Site.Models.Entities.SiteDictionary", "SiteUserId");
 
                     b.Navigation("SiteUser");
                 });

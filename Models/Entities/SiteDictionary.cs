@@ -7,9 +7,8 @@ namespace Learning_Site.Models.Entities
         public int SiteDictionaryId { get; set; }
         public string Name { get; set; }
         public ICollection<SiteNote> Notes { get; set; }
-
-        [ForeignKey("SiteUser")]
-        public string SiteUserID { get; set; }
+        [ForeignKey("SiteUserId")]
+        public string? SiteUserId { get; set; }
         public SiteUser SiteUser { get; set; }
     }
 }
