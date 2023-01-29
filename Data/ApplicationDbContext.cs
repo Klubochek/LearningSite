@@ -44,14 +44,14 @@ namespace Learning_Site.Data
             var Admin = new SiteUser()
             {
                 Id = _adminId,
-                Email = "Admin@gmail.com",
-                UserName = "Admin",
+                Email = "admin@gmail.com",
+                UserName = "admin@gmail.com",
                 EmailConfirmed = true,
-                NormalizedUserName = "ADMIN"
+                NormalizedUserName = "ADMIN@GMAIL.COM",
             };
             // хешим пароль и добавляем сущность в БД
             var hasher = new PasswordHasher<SiteUser>();
-            var hashedPass = hasher.HashPassword(Admin, "Admin");
+            var hashedPass = hasher.HashPassword(Admin, "mypassword_?");
             Admin.PasswordHash = hashedPass;
             builder.Entity<SiteUser>().HasData(Admin);
 

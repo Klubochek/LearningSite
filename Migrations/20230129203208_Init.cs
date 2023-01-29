@@ -266,7 +266,7 @@ namespace Learning_Site.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Discriminator", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "32350725-439a-4b52-a2c4-181287146cbc", 0, "1eec6a27-accf-4ad8-bb83-9846aace6ae1", "SiteUser", "Admin@gmail.com", true, false, null, null, "ADMIN", "AQAAAAEAACcQAAAAEKLoMbG6jkxSH81qS3WgNIOkkfFrQ/nAIXHemj4XniDI0aoYNVTEviMqtmNhqhBy0w==", null, false, "081d84ec-6fdd-4569-be26-b98b6e2fcd3a", false, "Admin" });
+                values: new object[] { "32350725-439a-4b52-a2c4-181287146cbc", 0, "e9b757e8-1ca8-494b-bb54-455c14fa32d5", "SiteUser", "admin@gmail.com", true, false, null, null, "ADMIN@GMAIL.COM", "AQAAAAEAACcQAAAAEM/k+YtNtmcpb6fYLNcriS4UwXIkj8aXYngY4ZS5+/MAn0IiMFoNh5nftpXVUZCT1A==", null, false, "281b7f31-4c2e-4550-9f0c-c8dfca512330", false, "admin@gmail.com" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",

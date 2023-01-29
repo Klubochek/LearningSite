@@ -12,14 +12,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Learning_Site.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230129191453_Init")]
+    [Migration("20230129203208_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.10")
+                .HasAnnotation("ProductVersion", "6.0.13")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -382,16 +382,16 @@ namespace Learning_Site.Migrations
                         {
                             Id = "32350725-439a-4b52-a2c4-181287146cbc",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "1eec6a27-accf-4ad8-bb83-9846aace6ae1",
-                            Email = "Admin@gmail.com",
+                            ConcurrencyStamp = "e9b757e8-1ca8-494b-bb54-455c14fa32d5",
+                            Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
-                            NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKLoMbG6jkxSH81qS3WgNIOkkfFrQ/nAIXHemj4XniDI0aoYNVTEviMqtmNhqhBy0w==",
+                            NormalizedUserName = "ADMIN@GMAIL.COM",
+                            PasswordHash = "AQAAAAEAACcQAAAAEM/k+YtNtmcpb6fYLNcriS4UwXIkj8aXYngY4ZS5+/MAn0IiMFoNh5nftpXVUZCT1A==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "081d84ec-6fdd-4569-be26-b98b6e2fcd3a",
+                            SecurityStamp = "281b7f31-4c2e-4550-9f0c-c8dfca512330",
                             TwoFactorEnabled = false,
-                            UserName = "Admin"
+                            UserName = "admin@gmail.com"
                         });
                 });
 
