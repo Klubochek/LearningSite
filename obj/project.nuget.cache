@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Kl48LzOAZTmpvZ1r6h5D4YmXeyrqYVAIt44c9yCUhx1syE9N27sJBgQmKXwGTk7fdamyWEVs7mViNPojJYwPZw==",
+  "dgSpecHash": "3ChNW2fEL0SxKRK5CyQQU2WoKweQgI7H1M6sqHrEDb85rDY3EcmVgkBRzoljPfCpvLLFapn300ovsEOKCKwFcg==",
   "success": true,
-  "projectFilePath": "E:\\TestProject\\WebLearningSite\\Learning Site\\Learning Site\\Learning Site.csproj",
+  "projectFilePath": "E:\\Development\\LearningSite\\Learning Site.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrklu\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\mrklu\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
