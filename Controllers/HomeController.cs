@@ -1,5 +1,6 @@
 ﻿using Learning_Site.Data;
 using Learning_Site.Models;
+using Learning_Site.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
@@ -22,13 +23,11 @@ namespace Learning_Site.Controllers
         public IActionResult Index()
         {
             var search = Request.Query["search"].ToString();
-            IQueryable courses= _context.Courses.Include(c => c.Creator); ;
+            List<Course> courses = _context.Courses.Include(c => c.Creator).ToList();
             if (search!=string.Empty)
             {
                 courses = _courseRepository.GetCoursesListByKeyword(search);
             }
-           
-         
             return View(courses);
         }
 

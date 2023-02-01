@@ -16,9 +16,9 @@ namespace Learning_Site.Models
         {
             return _context.Courses.OrderBy(c => c.CourseId);
         }
-        public IQueryable<Course> GetCoursesListByKeyword(string keyword)
+        public List <Course> GetCoursesListByKeyword(string keyword)
         {
-            return _context.Courses.Where(c=>c.Name.Contains(keyword)).OrderBy(c => c.CourseId).Include(c=>c.Creator);
+            return _context.Courses.Where(c=>c.Name.Contains(keyword)).OrderBy(c => c.CourseId).Include(c=>c.Creator).ToList();
         }
         public Course GetCourseByName(string name)
         {
