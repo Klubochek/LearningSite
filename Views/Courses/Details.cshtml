@@ -1,4 +1,9 @@
-﻿@model Course
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<SiteUser> SignInManager
+@inject UserManager<SiteUser> UserManager
+
+
+@model Course
 
 <!-- Detail Start -->
 <head>
@@ -40,10 +45,16 @@
                     <p>
                         @Model.Description
                     </p>
+                    @if (SignInManager.IsSignedIn(User) && !Model.SiteUsers.Contains(UserManager.GetUserAsync(User).Result))
+                    {
+                        <form method="POST" asp-controller="Courses" asp-action="Subscribe" asp-route-id="@Model.CourseId">
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    }
+              
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 <!-- Detail End -->
