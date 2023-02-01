@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Development\\LearningSite\\Learning Site.csproj": {}
+    "D:\\Repository\\LearningSite\\Learning Site.csproj": {}
   },
   "projects": {
-    "E:\\Development\\LearningSite\\Learning Site.csproj": {
+    "D:\\Repository\\LearningSite\\Learning Site.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Development\\LearningSite\\Learning Site.csproj",
+        "projectUniqueName": "D:\\Repository\\LearningSite\\Learning Site.csproj",
         "projectName": "Learning Site",
-        "projectPath": "E:\\Development\\LearningSite\\Learning Site.csproj",
+        "projectPath": "D:\\Repository\\LearningSite\\Learning Site.csproj",
         "packagesPath": "C:\\Users\\mrklu\\.nuget\\packages\\",
-        "outputPath": "E:\\Development\\LearningSite\\obj\\",
+        "outputPath": "D:\\Repository\\LearningSite\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -91,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

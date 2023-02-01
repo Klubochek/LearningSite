@@ -1,4 +1,5 @@
 using Learning_Site.Data;
+using Learning_Site.Models;
 using Learning_Site.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,6 +14,7 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<SiteUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
+builder.Services.AddTransient<CoursesRepository,CoursesRepository>();
 
 
 builder.Services.AddControllersWithViews();

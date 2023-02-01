@@ -11,16 +11,25 @@ namespace Learning_Site.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly ApplicationDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
+        private readonly CoursesRepository _courseRepository;
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext context, CoursesRepository courseRepository)
         {
             _logger = logger;
             _context= context;
+            _courseRepository= courseRepository;    
         }
 
         public IActionResult Index()
         {
-            var model = _context.Courses.Include(c=>c.Creator);
-            return View(model);
+            var search = Request.Query["search"].ToString();
+            IQueryable courses= _context.Courses.Include(c => c.Creator); ;
+            if (search!=string.Empty)
+            {
+                courses = _courseRepository.GetCoursesListByKeyword(search);
+            }
+           
+         
+            return View(courses);
         }
 
         public IActionResult Privacy()
