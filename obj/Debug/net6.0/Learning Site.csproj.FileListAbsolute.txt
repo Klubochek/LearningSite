@@ -826,3 +826,5 @@ D:\Repository\LearningSite\obj\Debug\net6.0\refint\Learning Site.dll
 D:\Repository\LearningSite\obj\Debug\net6.0\Learning Site.pdb
 D:\Repository\LearningSite\obj\Debug\net6.0\Learning Site.genruntimeconfig.cache
 D:\Repository\LearningSite\obj\Debug\net6.0\ref\Learning Site.dll
+E:\Development\LearningSite\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\Development\LearningSite\obj\Debug\net6.0\scopedcss\projectbundle\Learning Site.bundle.scp.css

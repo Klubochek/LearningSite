@@ -1,4 +1,8 @@
-﻿<div class="container-fluid p-0">
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<SiteUser> SignInManager
+@inject UserManager<SiteUser> UserManager
+
+<div class="container-fluid p-0">
     <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
         <a href="index.html" class="navbar-brand ml-lg-3">
             <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-book-reader mr-3"></i>Edukate</h1>
@@ -22,7 +26,21 @@
                 </div>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <a asp class="btn btn-primary py-2 px-4 d-none d-lg-block">Join Us</a>
+            @if (!SignInManager.IsSignedIn(User))
+            {
+                <a asp class="btn btn-primary py-2 px-4 d-none d-lg-block" asp-area="Identity" asp-page="/Account/Login">Join Us</a>
+            }
+            else
+            {
+                <div class="nav-item">
+                    <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
+                </div>
+                <div class="nav-item">
+                    <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                        <button  type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+                    </form>
+                </div>
+            }
         </div>
     </nav>
 </div>

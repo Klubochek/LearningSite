@@ -1,6 +1,7 @@
 using Learning_Site.Data;
 using Learning_Site.Models;
 using Learning_Site.Models.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

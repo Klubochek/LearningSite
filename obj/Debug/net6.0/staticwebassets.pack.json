@@ -1,527 +1,531 @@
 {
   "Files": [
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\css\\style.css",
+      "Id": "E:\\Development\\LearningSite\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Learning Site.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Learning Site.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\css\\style.min.css",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\css\\style.min.css",
       "PackagePath": "staticwebassets\\css\\style.min.css"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\favicon.ico",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\img\\about.jpg",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\img\\about.jpg",
       "PackagePath": "staticwebassets\\img\\about.jpg"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\img\\bg-image.jpg",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\img\\bg-image.jpg",
       "PackagePath": "staticwebassets\\img\\bg-image.jpg"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\img\\courses-1.jpg",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\img\\courses-1.jpg",
       "PackagePath": "staticwebassets\\img\\courses-1.jpg"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\img\\courses-2.jpg",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\img\\courses-2.jpg",
       "PackagePath": "staticwebassets\\img\\courses-2.jpg"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\img\\courses-3.jpg",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\img\\courses-3.jpg",
       "PackagePath": "staticwebassets\\img\\courses-3.jpg"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\img\\courses-4.jpg",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\img\\courses-4.jpg",
       "PackagePath": "staticwebassets\\img\\courses-4.jpg"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\img\\courses-5.jpg",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\img\\courses-5.jpg",
       "PackagePath": "staticwebassets\\img\\courses-5.jpg"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\img\\courses-6.jpg",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\img\\courses-6.jpg",
       "PackagePath": "staticwebassets\\img\\courses-6.jpg"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\img\\courses-80x80.jpg",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\img\\courses-80x80.jpg",
       "PackagePath": "staticwebassets\\img\\courses-80x80.jpg"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\img\\feature.jpg",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\img\\feature.jpg",
       "PackagePath": "staticwebassets\\img\\feature.jpg"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\img\\header.jpg",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\img\\header.jpg",
       "PackagePath": "staticwebassets\\img\\header.jpg"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\img\\overlay-bottom.png",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\img\\overlay-bottom.png",
       "PackagePath": "staticwebassets\\img\\overlay-bottom.png"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\img\\overlay-top.png",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\img\\overlay-top.png",
       "PackagePath": "staticwebassets\\img\\overlay-top.png"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\img\\page-header.jpg",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\img\\page-header.jpg",
       "PackagePath": "staticwebassets\\img\\page-header.jpg"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\img\\team-1.jpg",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\img\\team-1.jpg",
       "PackagePath": "staticwebassets\\img\\team-1.jpg"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\img\\team-2.jpg",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\img\\team-2.jpg",
       "PackagePath": "staticwebassets\\img\\team-2.jpg"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\img\\team-3.jpg",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\img\\team-3.jpg",
       "PackagePath": "staticwebassets\\img\\team-3.jpg"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\img\\team-4.jpg",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\img\\team-4.jpg",
       "PackagePath": "staticwebassets\\img\\team-4.jpg"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\img\\testimonial-1.jpg",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\img\\testimonial-1.jpg",
       "PackagePath": "staticwebassets\\img\\testimonial-1.jpg"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\img\\testimonial-2.jpg",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\img\\testimonial-2.jpg",
       "PackagePath": "staticwebassets\\img\\testimonial-2.jpg"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\js\\main.js",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\js\\main.js",
       "PackagePath": "staticwebassets\\js\\main.js"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\lib\\counterup\\counterup.min.js",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\lib\\counterup\\counterup.min.js",
       "PackagePath": "staticwebassets\\lib\\counterup\\counterup.min.js"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\lib\\easing\\easing.js",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\lib\\easing\\easing.js",
       "PackagePath": "staticwebassets\\lib\\easing\\easing.js"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\lib\\easing\\easing.min.js",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\lib\\easing\\easing.min.js",
       "PackagePath": "staticwebassets\\lib\\easing\\easing.min.js"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\lib\\owlcarousel\\LICENSE",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\lib\\owlcarousel\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\owlcarousel"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\lib\\owlcarousel\\assets\\ajax-loader.gif",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\lib\\owlcarousel\\assets\\ajax-loader.gif",
       "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\ajax-loader.gif"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.css",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.css",
       "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.carousel.css"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
       "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.carousel.min.css"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.css",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.css",
       "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.default.css"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
       "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.default.min.css"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.css",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.css",
       "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.green.css"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
       "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.green.min.css"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\lib\\owlcarousel\\assets\\owl.video.play.png",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\lib\\owlcarousel\\assets\\owl.video.play.png",
       "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.video.play.png"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\lib\\owlcarousel\\owl.carousel.js",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\lib\\owlcarousel\\owl.carousel.js",
       "PackagePath": "staticwebassets\\lib\\owlcarousel\\owl.carousel.js"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\lib\\owlcarousel\\owl.carousel.min.js",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\lib\\owlcarousel\\owl.carousel.min.js",
       "PackagePath": "staticwebassets\\lib\\owlcarousel\\owl.carousel.min.js"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\lib\\waypoints\\links.php",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\lib\\waypoints\\links.php",
       "PackagePath": "staticwebassets\\lib\\waypoints\\links.php"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\lib\\waypoints\\waypoints.min.js",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\lib\\waypoints\\waypoints.min.js",
       "PackagePath": "staticwebassets\\lib\\waypoints\\waypoints.min.js"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_alert.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_alert.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_alert.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_badge.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_badge.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_badge.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_breadcrumb.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_breadcrumb.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_breadcrumb.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_button-group.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_button-group.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_button-group.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_buttons.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_buttons.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_buttons.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_card.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_card.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_card.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_carousel.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_carousel.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_carousel.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_close.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_close.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_close.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_code.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_code.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_code.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_custom-forms.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_custom-forms.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_custom-forms.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_dropdown.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_dropdown.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_dropdown.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_forms.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_forms.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_forms.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_functions.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_functions.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_functions.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_grid.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_grid.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_grid.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_images.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_images.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_images.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_input-group.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_input-group.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_input-group.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_jumbotron.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_jumbotron.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_jumbotron.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_list-group.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_list-group.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_list-group.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_media.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_media.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_media.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_mixins.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_mixins.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_mixins.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_modal.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_modal.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_modal.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_nav.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_nav.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_nav.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_navbar.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_navbar.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_navbar.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_pagination.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_pagination.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_pagination.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_popover.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_popover.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_popover.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_print.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_print.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_print.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_progress.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_progress.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_progress.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_reboot.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_reboot.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_reboot.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_root.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_root.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_root.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_spinners.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_spinners.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_spinners.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_tables.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_tables.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_tables.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_toasts.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_toasts.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_toasts.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_tooltip.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_tooltip.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_tooltip.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_transitions.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_transitions.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_transitions.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_type.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_type.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_type.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_utilities.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_utilities.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_utilities.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_variables.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\_variables.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_variables.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\bootstrap-grid.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\bootstrap-grid.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\bootstrap-grid.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\bootstrap-reboot.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\bootstrap-reboot.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\bootstrap-reboot.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\bootstrap.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\bootstrap.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\bootstrap.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_alert.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_alert.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_alert.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_background-variant.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_background-variant.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_background-variant.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_badge.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_badge.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_badge.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_buttons.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_buttons.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_buttons.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_caret.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_caret.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_caret.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_float.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_float.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_float.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_forms.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_forms.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_forms.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_gradients.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_gradients.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_gradients.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_grid-framework.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_grid-framework.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_grid-framework.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_grid.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_grid.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_grid.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_hover.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_hover.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_hover.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_image.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_image.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_image.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_list-group.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_list-group.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_list-group.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_lists.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_lists.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_lists.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_nav-divider.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_nav-divider.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_nav-divider.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_pagination.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_pagination.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_pagination.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_resize.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_resize.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_resize.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_screen-reader.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_screen-reader.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_screen-reader.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_size.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_size.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_size.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_table-row.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_table-row.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_table-row.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_text-emphasis.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_text-emphasis.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_text-emphasis.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_text-hide.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_text-hide.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_text-hide.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_transition.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_transition.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_transition.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_visibility.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_visibility.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_visibility.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_align.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_align.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_align.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_background.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_background.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_background.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_borders.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_borders.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_borders.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_clearfix.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_clearfix.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_clearfix.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_display.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_display.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_display.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_embed.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_embed.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_embed.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_flex.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_flex.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_flex.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_float.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_float.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_float.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_interactions.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_interactions.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_interactions.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_overflow.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_overflow.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_overflow.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_position.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_position.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_position.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_screenreaders.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_screenreaders.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_screenreaders.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_shadows.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_shadows.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_shadows.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_sizing.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_sizing.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_sizing.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_spacing.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_spacing.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_spacing.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_stretched-link.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_stretched-link.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_stretched-link.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_text.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_text.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_text.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_visibility.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_visibility.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_visibility.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\vendor\\_rfs.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\bootstrap\\scss\\vendor\\_rfs.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\vendor\\_rfs.scss"
     },
     {
-      "Id": "D:\\Repository\\LearningSite\\wwwroot\\scss\\style.scss",
+      "Id": "E:\\Development\\LearningSite\\wwwroot\\scss\\style.scss",
       "PackagePath": "staticwebassets\\scss\\style.scss"
     },
     {

@@ -19,7 +19,6 @@ namespace Learning_Site.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-            Database.EnsureDeleted();
             Database.Migrate();
             Database.EnsureCreated();
             

@@ -19,7 +19,7 @@
             @foreach (Course course  in Model)
             {
             <div class="col-lg-4 col-md-6 pb-4">
-                <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="detail.html">
+                <a class="courses-list-item position-relative d-block overflow-hidden mb-2" asp-controller="Courses" asp-action="Details" asp-route-id="@course.CourseId">
                     <img class="img-fluid" src="@course.Image" alt="">
                     <div class="courses-text">
                         <h4 class="text-center text-white px-3">
