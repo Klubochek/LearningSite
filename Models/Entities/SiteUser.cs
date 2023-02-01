@@ -7,6 +7,8 @@ namespace Learning_Site.Models.Entities
     {
         public ICollection<Course> Courses { get; set; }
 
+        public ICollection<Course> CreatedCourses { get; set; }
+
         public SiteDictionary SiteDictionary { get; set; }
     }
 }

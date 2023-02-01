@@ -4,6 +4,7 @@ using Learning_Site.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Learning_Site.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230201095613_AddCreator")]
+    partial class AddCreator
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -53,10 +55,6 @@ namespace Learning_Site.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Image")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -66,16 +64,6 @@ namespace Learning_Site.Migrations
                     b.HasIndex("CreatorId");
 
                     b.ToTable("Courses");
-
-                    b.HasData(
-                        new
-                        {
-                            CourseId = 1,
-                            CreatorId = "32350725-439a-4b52-a2c4-181287146cbc",
-                            Description = "discription",
-                            Image = "https://courses.prometheus.org.ua/asset-v1:LITS+114+2022_T2+type@asset+block@Web_UI__2022.png",
-                            Name = "web course"
-                        });
                 });
 
             modelBuilder.Entity("Learning_Site.Models.Entities.Lesson", b =>
@@ -400,14 +388,14 @@ namespace Learning_Site.Migrations
                         {
                             Id = "32350725-439a-4b52-a2c4-181287146cbc",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "014d697c-fbb4-4596-a63a-b35ba8aa6da5",
+                            ConcurrencyStamp = "225f0e61-8c61-4432-8155-9fc87b1a3c6f",
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKVAUpdiwEYQQAQhKjqpS3Neg9i/yyb2KyuOLp//rGUfKCokettGox+OQ9qKD7Ev7Q==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEF1Bq+wCdSgF17Vk81aFm9qrL63rDX0NQstVD68rRG3gpnoM4wIf9RvWQcjoVNt0ig==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "51186c5d-0e2c-41d5-baf2-fca92d5f2d10",
+                            SecurityStamp = "7ec26153-7d7d-42d8-9b7c-39f3731a15fb",
                             TwoFactorEnabled = false,
                             UserName = "admin@gmail.com"
                         });
