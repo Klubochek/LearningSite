@@ -1,7 +1,11 @@
-﻿namespace Learning_Site.Models.Entities
+﻿using MessagePack;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Learning_Site.Models.Entities
 {
     public class Course
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CourseId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }

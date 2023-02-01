@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using static System.Net.WebRequestMethods;
 
 namespace Learning_Site.Data
 {
@@ -11,7 +10,11 @@ namespace Learning_Site.Data
         private string _defaultUserRoleId = "73329a1f-ccb8-4902-b254-574617713ad8";
         private string _adminRoleId = "5c9d18af-ae43-49e3-a698-d284d4ff03c2";
         private string _adminId = "32350725-439a-4b52-a2c4-181287146cbc";
-
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<Lesson> Lessons { get; set; }
+        public DbSet<SiteUser> SiteUsers { get; set; }
+        public DbSet<SiteDictionary> SiteDictionary { get; set; }
+        public DbSet<SiteNote> SiteNotes { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
@@ -27,8 +30,6 @@ namespace Learning_Site.Data
 
             CreateReleationship(builder);
             CreateEntities(builder);
-            
-
             
         }
         private void CreateReleationship(ModelBuilder builder)
@@ -91,7 +92,7 @@ namespace Learning_Site.Data
                 UserId = _adminId
             });
 
-            //Добавляем первый курс
+            //Добавляем курсы
             builder.Entity<Course>().HasData(new Course
             {
                 CourseId = 1,
@@ -100,12 +101,34 @@ namespace Learning_Site.Data
                 CreatorId = Admin.Id,
                 Image = "https://courses.prometheus.org.ua/asset-v1:LITS+114+2022_T2+type@asset+block@Web_UI__2022.png"
             });
-        }
 
-        public DbSet<Course> Courses { get; set; }
-        public DbSet<Lesson> Lessons { get; set; }
-        public DbSet<SiteUser> SiteUsers { get; set; }
-        public DbSet<SiteDictionary> SiteDictionary { get; set; }
-        public DbSet<SiteNote> SiteNotes { get; set; }
+
+            builder.Entity<Course>().HasData(new Course
+            {
+                CourseId = 2,
+                Name = "Web Programming with Python and JavaScript CS50",
+                Description = "Have you already mastered the basics of programming and are ready to create your own applications? Do you want to learn more about one of the most promising areas of information technology - web programming? Are you eager to learn Python but don't know where to start? Together with the teachers of Harvard University, we will help you!\r\n\r\nThe course \"CS50: Web Programming with Python and JavaScript\" is a continuation of the legendary course \"CS50: Programming Basics\" from Harvard University, which is considered the best course for mastering computer skills in the world and is available on our platform in Ukrainian translation. Together with the teachers of the course, you will move to a new level and learn to work on creating programs and applications for the web.",
+                Image = "https://courses.prometheus.org.ua/asset-v1:Prometheus+CS50+2021_T1+type@asset+block@8f8e5124-1dab-47e6-8fa6-3fbdc0738f0a-762af069070e.small.jpg",
+                CreatorId = Admin.Id
+            });
+            builder.Entity<Course>().HasData(new Course
+            {
+                CourseId = 3,
+                Name = "IT product from scratch: where to start and how to develop ?",
+                Description = "Have you been dreaming about your business for a long time, but have no ideas? Or you already have a brilliant idea, but you don't know what to do next: how to implement it, where to start, where to find funding?\r\n\r\nOleksandr Reminny, together with Rist, created the course \"IT product from scratch: where to start and how to develop?\"\r\n\r\nA set of lectures is waiting for you without pouring from empty to empty, with real examples from the experience of developing IT companies from Oleksandr and his colleagues in the workshop.\r\n\r\nHow to choose an idea? How to invalidate it? How to build the first version of the product and get the first WOW effect from potential customers? What to do yourself, and what to give to contractors? When to hire the first employee? About all this and even more - in our online course.\r\n\r\nOur course is a mini acceleration program. It will help to better understand how to create and develop IT products.",
+                Image = "https://courses.prometheus.org.ua/asset-v1:Prometheus+IT101+2022_T1+type@asset+block@IMG_20211215_071820_767.jpg",
+                CreatorId = Admin.Id
+            });
+            builder.Entity<Course>().HasData(new Course
+            {
+                CourseId = 4,
+                Name = "Basics of programming in Java",
+                Description = "Java is one of the most popular programming languages used by software developers today. The language core is used in the development of Android applications, and is also widely used in web development, namely in the back-end. If you are new to Java programming and want to start building your own applications, this course is a great place to start.\r\n\r\nEven if you have no thoughts about a career as a developer using Java, these lectures will be an excellent choice for beginners due to the ease of use of the language. You'll get a solid foundation in computer science and object-oriented programming, and you'll be on your way to success as a software engineer.\r\n\r\nThis course is aimed at learning Java both by people with a minimum level of programming knowledge and by people who want to improve their knowledge of certain nuances of the language. After completing it, you will be able to write programs in Java, and you will have the foundation necessary to further deepen your knowledge and skills in programming.",
+                Image = "https://courses.prometheus.org.ua/c4x/EPAM/JAVA101/asset/12865_65fc_4.jpg",
+                CreatorId = Admin.Id
+            });
+
+        }
+        
     }
 }

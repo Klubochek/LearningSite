@@ -1,5 +1,6 @@
 ﻿using Learning_Site.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Learning_Site.Controllers
 {
@@ -14,8 +15,7 @@ namespace Learning_Site.Controllers
 
         public IActionResult Index()
         {
-
-            var model = _context.Roles;
+            var model = _context.Courses.Include(c=>c.Creator);
             return View(model);
         }
     }
