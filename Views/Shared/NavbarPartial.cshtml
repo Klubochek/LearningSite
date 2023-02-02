@@ -19,7 +19,10 @@
                 <a asp class="btn btn-primary py-2 px-4 d-none d-lg-block" asp-area="Identity" asp-page="/Account/Login">Join Us</a>
             }
             else
-            {
+            {   
+                <div class="nav-item">
+                    <a class="nav-link text-dark" asp-controller="CourseManage" asp-action="Index">Course Manage</a>
+                </div>
                 <div class="nav-item">
                     <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
                 </div>

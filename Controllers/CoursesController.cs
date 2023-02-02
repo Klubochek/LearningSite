@@ -17,13 +17,6 @@ namespace Learning_Site.Controllers
             _context = context;
             _userManager = userManager;
         }
-        [HttpGet]
-        [Route("courses")]
-        public IActionResult Index()
-        {
-            var model = _context.Courses.Include(c=>c.Creator);
-            return View(model);
-        }
 
         [HttpGet]
         [Route("courses/{id}")]
@@ -48,9 +41,7 @@ namespace Learning_Site.Controllers
             {
                 return RedirectToAction("Index");
             }
-            var task = _userManager.GetUserAsync(User);
-
-            var user = task.Result;
+            var user = _userManager.GetUserAsync(User).Result;
 
             if(user != null)
             {

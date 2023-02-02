@@ -2,33 +2,11 @@
 @inject SignInManager<SiteUser> SignInManager
 @inject UserManager<SiteUser> UserManager
 
-
 @model Course
 
-<!-- Detail Start -->
-<head>
-    <meta charset="utf-8">
-    <title>Edukate - Online Education Website Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="~/css/style.css" rel="stylesheet">
-</head>
+@{
+    Layout = "_Layout";
+}
 
 <div class="container-fluid py-5">
     <div class="container py-5">
@@ -45,16 +23,32 @@
                     <p>
                         @Model.Description
                     </p>
-                    @if (SignInManager.IsSignedIn(User) && !Model.SiteUsers.Contains(UserManager.GetUserAsync(User).Result))
+                    @if (!SignInManager.IsSignedIn(User))
                     {
-                        <form method="POST" asp-controller="Courses" asp-action="Subscribe" asp-route-id="@Model.CourseId">
-                            <button type="submit">Subscribe</button>
-                        </form>
+                        <a asp class="btn btn-primary py-2 px-4 d-none d-lg-block" asp-area="Identity" asp-page="/Account/Login">Log in to enroll in a course.</a>
                     }
+                     else
+                    {
+                        @if (Model.SiteUsers.Contains(UserManager.GetUserAsync(User).Result))
+                        {
+                            <div class="d-inline-block position-relative text-secondary text-uppercase pb-2">You are subscribed to the course</div>
+                        }
+
+                         @if (!Model.SiteUsers.Contains(UserManager.GetUserAsync(User).Result))
+                        {
+                        <form method="POST" asp-controller="Courses" asp-action="Subscribe" asp-route-id="@Model.CourseId">
+                            <button class="btn btn-primary py-2 px-4 d-none d-lg-block" type="submit">Subscribe</button>
+                        </form>
+                        }
+
+                        <div>
+                            <i class="fa fa-user" aria-hidden="true"><span class="ml-2">@Model.SiteUsers.Count signed participant</span></i>
+                        </div>
+                    }
+                   
               
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Detail End -->
