@@ -1,4 +1,6 @@
-﻿namespace Learning_Site.Models.Entities
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Learning_Site.Models.Entities
 {
     public class Lesson
     {
@@ -12,7 +14,9 @@
         
         public string? Photo { get; set; }  
 
-        public Course Course { get; set; }
+        public int CourseId { get; set; }
+
+        public Test? Test { get; set; }
         
     }
 }

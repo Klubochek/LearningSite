@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Learning_Site.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230201130559_Init")]
+    [Migration("20230202165426_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,6 +39,124 @@ namespace Learning_Site.Migrations
                     b.ToTable("CourseSiteUser");
                 });
 
+            modelBuilder.Entity("Learning_Site.Models.Entities.Answer", b =>
+                {
+                    b.Property<int>("AnswerId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AnswerId"), 1L, 1);
+
+                    b.Property<string>("AnswerText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("QuestionId")
+                        .HasColumnType("int");
+
+                    b.HasKey("AnswerId");
+
+                    b.ToTable("Answers");
+
+                    b.HasData(
+                        new
+                        {
+                            AnswerId = 1,
+                            AnswerText = "The process of creating web applications and websites",
+                            QuestionId = 1
+                        },
+                        new
+                        {
+                            AnswerId = 2,
+                            AnswerText = "Web programming is not separated from the concept of programming in general",
+                            QuestionId = 1
+                        },
+                        new
+                        {
+                            AnswerId = 3,
+                            AnswerText = "All options are wrong",
+                            QuestionId = 1
+                        },
+                        new
+                        {
+                            AnswerId = 4,
+                            AnswerText = "HTML/CSS",
+                            QuestionId = 2
+                        },
+                        new
+                        {
+                            AnswerId = 5,
+                            AnswerText = "HTML/CSS/JavaScript",
+                            QuestionId = 2
+                        },
+                        new
+                        {
+                            AnswerId = 6,
+                            AnswerText = "HTML/CSS/PHP",
+                            QuestionId = 0
+                        },
+                        new
+                        {
+                            AnswerId = 7,
+                            AnswerText = "HTML/CSS/JavaScript/PHP",
+                            QuestionId = 2
+                        },
+                        new
+                        {
+                            AnswerId = 8,
+                            AnswerText = "Working with frameworks and libraries",
+                            QuestionId = 3
+                        },
+                        new
+                        {
+                            AnswerId = 9,
+                            AnswerText = "Code optimization",
+                            QuestionId = 3
+                        },
+                        new
+                        {
+                            AnswerId = 10,
+                            AnswerText = "Writing documentation",
+                            QuestionId = 3
+                        },
+                        new
+                        {
+                            AnswerId = 11,
+                            AnswerText = "Creating a web page markup",
+                            QuestionId = 3
+                        },
+                        new
+                        {
+                            AnswerId = 12,
+                            AnswerText = "Management of the development team",
+                            QuestionId = 3
+                        },
+                        new
+                        {
+                            AnswerId = 13,
+                            AnswerText = "Static - written only in HTML/CSS (maybe some Javascript effects), and dynamic - in HTML/CSS/Javascript + server programming languages.",
+                            QuestionId = 4
+                        },
+                        new
+                        {
+                            AnswerId = 14,
+                            AnswerText = "Static - can only display information, but do not allow the user to change it or interact with the page in any way; dynamic - respond to user actions.",
+                            QuestionId = 4
+                        },
+                        new
+                        {
+                            AnswerId = 15,
+                            AnswerText = "A static web page will remain the same until someone manually changes it. Dynamic web pages are behavioral in nature and able to produce excellent content for different visitors.",
+                            QuestionId = 4
+                        },
+                        new
+                        {
+                            AnswerId = 16,
+                            AnswerText = "All answers are correct",
+                            QuestionId = 4
+                        });
+                });
+
             modelBuilder.Entity("Learning_Site.Models.Entities.Course", b =>
                 {
                     b.Property<int>("CourseId")
@@ -52,7 +170,6 @@ namespace Learning_Site.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Image")
@@ -116,11 +233,16 @@ namespace Learning_Site.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Photo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Video")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("LessonId");
@@ -128,6 +250,84 @@ namespace Learning_Site.Migrations
                     b.HasIndex("CourseId");
 
                     b.ToTable("Lessons");
+
+                    b.HasData(
+                        new
+                        {
+                            LessonId = 1,
+                            CourseId = 1,
+                            Name = "Video lesson 1 - History of development, current situation",
+                            Video = "https://www.youtube.com/embed/d5mngMRh35M"
+                        },
+                        new
+                        {
+                            LessonId = 2,
+                            CourseId = 1,
+                            Name = "Video lesson 2 - The process of web development",
+                            Video = "https://youtu.be/d0clV_2lyUA"
+                        },
+                        new
+                        {
+                            LessonId = 3,
+                            CourseId = 1,
+                            Name = "Video lesson 3 - Responsibilities and tasks of a Front-end developer",
+                            Video = "https://youtu.be/jDNkTKy_rsE"
+                        });
+                });
+
+            modelBuilder.Entity("Learning_Site.Models.Entities.Question", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CorrectAnswer")
+                        .HasColumnType("int");
+
+                    b.Property<string>("QuestionDiscription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TestId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TestId");
+
+                    b.ToTable("Questions");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CorrectAnswer = 1,
+                            QuestionDiscription = "What is web development ?",
+                            TestId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CorrectAnswer = 5,
+                            QuestionDiscription = "What are the main technologies used in front-end development?",
+                            TestId = 1
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CorrectAnswer = 12,
+                            QuestionDiscription = "What is NOT included in the tasks of a web developer?",
+                            TestId = 1
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CorrectAnswer = 16,
+                            QuestionDiscription = "What is the difference between static and dynamic web pages?",
+                            TestId = 1
+                        });
                 });
 
             modelBuilder.Entity("Learning_Site.Models.Entities.SiteDictionary", b =>
@@ -182,6 +382,37 @@ namespace Learning_Site.Migrations
                     b.HasIndex("SiteDictionaryId");
 
                     b.ToTable("SiteNotes");
+                });
+
+            modelBuilder.Entity("Learning_Site.Models.Entities.Test", b =>
+                {
+                    b.Property<int>("TestId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TestId"), 1L, 1);
+
+                    b.Property<int>("LessonId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TestName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("TestId");
+
+                    b.HasIndex("LessonId")
+                        .IsUnique();
+
+                    b.ToTable("Tests");
+
+                    b.HasData(
+                        new
+                        {
+                            TestId = 1,
+                            LessonId = 3,
+                            TestName = "Test"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -426,14 +657,14 @@ namespace Learning_Site.Migrations
                         {
                             Id = "32350725-439a-4b52-a2c4-181287146cbc",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "56252913-573c-4593-8af1-5330ce32f621",
+                            ConcurrencyStamp = "c8508928-9ef2-4289-870e-c0bba9c50911",
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEDqpOeP7WVYOZsMWkxqkiT9iZgkJu6TsXTqBdfqO9AdvK1NwThkSUWc8q3Da45Ckbg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBzD454CTWtGl5QqDpN45+WCBe45nHSKmIDsxlpmOSdPB5BM7qDw6rspWQxnM1J+DQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "52afc790-a879-4dd6-add2-9560e3c88cfb",
+                            SecurityStamp = "290636ec-c2ff-446d-8cfc-e0d3ebd78176",
                             TwoFactorEnabled = false,
                             UserName = "admin@gmail.com"
                         });
@@ -467,13 +698,20 @@ namespace Learning_Site.Migrations
 
             modelBuilder.Entity("Learning_Site.Models.Entities.Lesson", b =>
                 {
-                    b.HasOne("Learning_Site.Models.Entities.Course", "Course")
+                    b.HasOne("Learning_Site.Models.Entities.Course", null)
                         .WithMany("Lessons")
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
 
-                    b.Navigation("Course");
+            modelBuilder.Entity("Learning_Site.Models.Entities.Question", b =>
+                {
+                    b.HasOne("Learning_Site.Models.Entities.Test", null)
+                        .WithMany("Questions")
+                        .HasForeignKey("TestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Learning_Site.Models.Entities.SiteDictionary", b =>
@@ -494,6 +732,15 @@ namespace Learning_Site.Migrations
                         .IsRequired();
 
                     b.Navigation("SiteDictionary");
+                });
+
+            modelBuilder.Entity("Learning_Site.Models.Entities.Test", b =>
+                {
+                    b.HasOne("Learning_Site.Models.Entities.Lesson", null)
+                        .WithOne("Test")
+                        .HasForeignKey("Learning_Site.Models.Entities.Test", "LessonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -552,9 +799,19 @@ namespace Learning_Site.Migrations
                     b.Navigation("Lessons");
                 });
 
+            modelBuilder.Entity("Learning_Site.Models.Entities.Lesson", b =>
+                {
+                    b.Navigation("Test");
+                });
+
             modelBuilder.Entity("Learning_Site.Models.Entities.SiteDictionary", b =>
                 {
                     b.Navigation("Notes");
+                });
+
+            modelBuilder.Entity("Learning_Site.Models.Entities.Test", b =>
+                {
+                    b.Navigation("Questions");
                 });
 
             modelBuilder.Entity("Learning_Site.Models.Entities.SiteUser", b =>
