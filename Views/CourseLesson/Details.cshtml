@@ -37,6 +37,17 @@ wmode=transparent&amp;rel=0&amp;showinfo=0&amp;enablejsapi=1&amp;modestbranding=
                 {
                     <a class="link-primary" asp-controller="CourseLesson" asp-action="Details" asp-route-courseId="@Model.Course.CourseId" asp-route-lessonId="@Model.NextLesson.LessonId">@Model.NextLesson.Name</a> <br />
                 }
+                @if (Model.Test != null)
+                {
+                    foreach(var question in Model.Questions)
+                    {
+                        <p>@question.QuestionDiscription</p>
+                        foreach(var answer in question.Answers)
+                        {
+                            <p>@answer.AnswerText</p>
+                        }
+                    }
+                }
             </div>
         </div>
     </div>

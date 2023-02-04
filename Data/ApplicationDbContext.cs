@@ -43,11 +43,11 @@ namespace Learning_Site.Data
                 .HasForeignKey(u => u.CreatorId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            builder.Entity<Question>()
-                .HasMany<Answer>(q => q.Answers)
-                .WithOne(a => a.Question)
-                .HasForeignKey(a => a.QuestionId)
-                .OnDelete(DeleteBehavior.Restrict);
+            //builder.Entity<Question>()
+            //    .HasMany<Answer>(q => q.Answers)
+            //    .WithOne(a => a.Question)
+            //    .HasForeignKey(a => a.QuestionId)
+            //    .OnDelete(DeleteBehavior.Restrict);
         }
 
         private void CreateEntities(ModelBuilder builder)
@@ -187,14 +187,12 @@ namespace Learning_Site.Data
             {
                 AnswerId = 1,
                 AnswerText = "The process of creating web applications and websites",
-                Question = question1,
                 QuestionId = question1.Id
             });
             builder.Entity<Answer>().HasData(new Answer
             {
                 AnswerId = 2,
                 AnswerText = "Web programming is not separated from the concept of programming in general",
-                Question = question1,
                 QuestionId = question1.Id
 
             });
@@ -202,7 +200,6 @@ namespace Learning_Site.Data
             {
                 AnswerId = 3,
                 AnswerText = "All options are wrong",
-                Question = question1,
                 QuestionId = question1.Id
 
             });
@@ -222,7 +219,7 @@ namespace Learning_Site.Data
             {
                 AnswerId = 4,
                 AnswerText = "HTML/CSS",
-                Question = question2,
+                //Question = question2,
                 QuestionId = question2.Id
 
             });
@@ -230,7 +227,7 @@ namespace Learning_Site.Data
             {
                 AnswerId = 5,
                 AnswerText = "HTML/CSS/JavaScript",
-                Question = question2,
+                //Question = question2,
                 QuestionId = question2.Id
 
             });
@@ -244,7 +241,7 @@ namespace Learning_Site.Data
             {
                 AnswerId = 7,
                 AnswerText = "HTML/CSS/JavaScript/PHP",
-                Question = question2,
+                //Question = question2,
                 QuestionId = question2.Id
 
             });
@@ -262,7 +259,7 @@ namespace Learning_Site.Data
             {
                 AnswerId = 8,
                 AnswerText = "Working with frameworks and libraries",
-                Question = question3,
+                //Question = question3,
                 QuestionId = question3.Id
 
             });
@@ -270,7 +267,6 @@ namespace Learning_Site.Data
             {
                 AnswerId = 9,
                 AnswerText = "Code optimization",
-                Question = question3,
                 QuestionId = question3.Id
 
             });
@@ -278,7 +274,6 @@ namespace Learning_Site.Data
             {
                 AnswerId = 10,
                 AnswerText = "Writing documentation",
-                Question = question3,
                 QuestionId = question3.Id
 
             });
@@ -286,7 +281,6 @@ namespace Learning_Site.Data
             {
                 AnswerId = 11,
                 AnswerText = "Creating a web page markup",
-                Question = question3,
                 QuestionId = question3.Id
 
             });
@@ -294,7 +288,6 @@ namespace Learning_Site.Data
             {
                 AnswerId = 12,
                 AnswerText = "Management of the development team",
-                Question = question3,
                 QuestionId = question3.Id
 
             });
@@ -312,14 +305,12 @@ namespace Learning_Site.Data
             {
                 AnswerId = 13,
                 AnswerText = "Static - written only in HTML/CSS (maybe some Javascript effects), and dynamic - in HTML/CSS/Javascript + server programming languages.",
-                Question = question4,
                 QuestionId = question4.Id
             });
             builder.Entity<Answer>().HasData(new Answer
             {
                 AnswerId = 14,
                 AnswerText = "Static - can only display information, but do not allow the user to change it or interact with the page in any way; dynamic - respond to user actions.",
-                Question = question4,
                 QuestionId = question4.Id
 
             });
@@ -327,7 +318,6 @@ namespace Learning_Site.Data
             {
                 AnswerId = 15,
                 AnswerText = "A static web page will remain the same until someone manually changes it. Dynamic web pages are behavioral in nature and able to produce excellent content for different visitors.",
-                Question = question4,
                 QuestionId=  question4.Id
           
             });
@@ -335,7 +325,6 @@ namespace Learning_Site.Data
             {
                 AnswerId = 16,
                 AnswerText = "All answers are correct",
-                Question = question4,
                 QuestionId = question4.Id
 
             });
