@@ -1,0 +1,43 @@
+﻿@using Learning_Site.DTO.CourseLesson;
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<SiteUser> SignInManager
+@inject UserManager<SiteUser> UserManager
+
+@model CourseLessonDTO
+
+@{
+    Layout = "_Layout";
+}
+
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="mb-5">
+
+                    <div class="section-title position-relative mb-5">
+                        <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Lesson Detail</h6>
+                        <h1 class="display-4">@Model.CurrentLesson.Name</h1>
+                    </div>
+
+                   <iframe id="7c5ad6cf87614a2685e3bce87b92e56d" 
+                       frameborder="0" allowfullscreen="1" 
+                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                       title="course-v1:LITS+114+2020_T3 video_webui_1_2_3" width="640" height="360"
+                            src="@Model.CurrentLesson.Video;
+wmode=transparent&amp;rel=0&amp;showinfo=0&amp;enablejsapi=1&amp;modestbranding=1&amp;cc_load_policy=0&amp;html5=1&amp;origin=https%3A%2F%2Fcourses.prometheus.org.ua&amp;widgetid=1" tabindex="-1" style="height: 607.5px; width: 1080px; top: 20.25px; left: 0px;" data-gtm-yt-inspected-8="true"></iframe>
+                </div>
+
+
+                @if(Model.PreviusLesson != null)
+                {
+                    <a class="link-primary" asp-controller="CourseLesson" asp-action="Details" asp-route-courseId="@Model.Course.CourseId" asp-route-lessonId="@Model.PreviusLesson.LessonId">@Model.PreviusLesson.Name</a> <br />
+                }
+                @if (Model.NextLesson != null)
+                {
+                    <a class="link-primary" asp-controller="CourseLesson" asp-action="Details" asp-route-courseId="@Model.Course.CourseId" asp-route-lessonId="@Model.NextLesson.LessonId">@Model.NextLesson.Name</a> <br />
+                }
+            </div>
+        </div>
+    </div>
+</div>

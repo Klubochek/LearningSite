@@ -4,6 +4,7 @@ using Learning_Site.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Learning_Site.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230204195154_init")]
+    partial class init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -53,8 +55,6 @@ namespace Learning_Site.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("AnswerId");
-
-                    b.HasIndex("QuestionId");
 
                     b.ToTable("Answers");
 
@@ -657,14 +657,14 @@ namespace Learning_Site.Migrations
                         {
                             Id = "32350725-439a-4b52-a2c4-181287146cbc",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e6543113-266f-4811-8955-b00d8f5b287d",
+                            ConcurrencyStamp = "5086f731-00cb-48b5-97b1-5a932dd6e65b",
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEAfkiiI9Knnnewc9AP5EbmqS5mlmcAP40ITGhS+8Yzqd7+E7J4JHn+s4deKp/g9N6w==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEI39zFQ8Z5oNJkRgPpkU7AobHscn+jjK5RWRtuLlC9xz383mhLgMqAbhqKxn0g/xpA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6a6150f9-39fb-4f85-b616-438d06946b56",
+                            SecurityStamp = "b6012dba-d9cb-493b-be6d-16d78b0e658e",
                             TwoFactorEnabled = false,
                             UserName = "admin@gmail.com"
                         });
@@ -681,15 +681,6 @@ namespace Learning_Site.Migrations
                     b.HasOne("Learning_Site.Models.Entities.SiteUser", null)
                         .WithMany()
                         .HasForeignKey("SiteUsersId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Learning_Site.Models.Entities.Answer", b =>
-                {
-                    b.HasOne("Learning_Site.Models.Entities.Question", null)
-                        .WithMany("Answers")
-                        .HasForeignKey("QuestionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -811,11 +802,6 @@ namespace Learning_Site.Migrations
             modelBuilder.Entity("Learning_Site.Models.Entities.Lesson", b =>
                 {
                     b.Navigation("Test");
-                });
-
-            modelBuilder.Entity("Learning_Site.Models.Entities.Question", b =>
-                {
-                    b.Navigation("Answers");
                 });
 
             modelBuilder.Entity("Learning_Site.Models.Entities.SiteDictionary", b =>

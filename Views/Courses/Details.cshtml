@@ -13,6 +13,7 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="mb-5">
+
                     <div class="section-title position-relative mb-5">
                         <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Course Detail</h6>
                         <h1 class="display-4">@Model.Name</h1>
@@ -31,7 +32,19 @@
                     {
                         @if (Model.SiteUsers.Contains(UserManager.GetUserAsync(User).Result))
                         {
+
+                            <div class="lessons">
+                                @foreach(Lesson lesson in Model.Lessons)
+                                {          
+                                    <a class="link-primary" asp-controller="CourseLesson" asp-action="Details" asp-route-courseId="@Model.CourseId" asp-route-lessonId="@lesson.LessonId">@lesson.Name</a> <br />
+                                }
+
+                            </div>
+
+
                             <div class="d-inline-block position-relative text-secondary text-uppercase pb-2">You are subscribed to the course</div>
+
+
                         }
 
                          @if (!Model.SiteUsers.Contains(UserManager.GetUserAsync(User).Result))

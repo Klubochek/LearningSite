@@ -6,6 +6,5 @@
         public string TestName { get; set; }
         public int LessonId { get; set; }  
         public ICollection<Question> Questions { get; set; }
-
     }
 }

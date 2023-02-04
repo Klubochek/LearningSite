@@ -5,6 +5,9 @@
         public int Id { get; set; }
         public string QuestionDiscription { get; set; }
         public int CorrectAnswer { get; set; }
+
+        public ICollection<Answer> Answers { get; set; }
+
         public int TestId { get; set; }
     }
 }

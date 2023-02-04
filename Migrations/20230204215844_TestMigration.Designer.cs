@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Learning_Site.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230202165426_Init")]
-    partial class Init
+    [Migration("20230204215844_TestMigration")]
+    partial class TestMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -55,6 +55,8 @@ namespace Learning_Site.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("AnswerId");
+
+                    b.HasIndex("QuestionId");
 
                     b.ToTable("Answers");
 
@@ -657,14 +659,14 @@ namespace Learning_Site.Migrations
                         {
                             Id = "32350725-439a-4b52-a2c4-181287146cbc",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "c8508928-9ef2-4289-870e-c0bba9c50911",
+                            ConcurrencyStamp = "e6543113-266f-4811-8955-b00d8f5b287d",
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEBzD454CTWtGl5QqDpN45+WCBe45nHSKmIDsxlpmOSdPB5BM7qDw6rspWQxnM1J+DQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEAfkiiI9Knnnewc9AP5EbmqS5mlmcAP40ITGhS+8Yzqd7+E7J4JHn+s4deKp/g9N6w==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "290636ec-c2ff-446d-8cfc-e0d3ebd78176",
+                            SecurityStamp = "6a6150f9-39fb-4f85-b616-438d06946b56",
                             TwoFactorEnabled = false,
                             UserName = "admin@gmail.com"
                         });
@@ -681,6 +683,15 @@ namespace Learning_Site.Migrations
                     b.HasOne("Learning_Site.Models.Entities.SiteUser", null)
                         .WithMany()
                         .HasForeignKey("SiteUsersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Learning_Site.Models.Entities.Answer", b =>
+                {
+                    b.HasOne("Learning_Site.Models.Entities.Question", null)
+                        .WithMany("Answers")
+                        .HasForeignKey("QuestionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -802,6 +813,11 @@ namespace Learning_Site.Migrations
             modelBuilder.Entity("Learning_Site.Models.Entities.Lesson", b =>
                 {
                     b.Navigation("Test");
+                });
+
+            modelBuilder.Entity("Learning_Site.Models.Entities.Question", b =>
+                {
+                    b.Navigation("Answers");
                 });
 
             modelBuilder.Entity("Learning_Site.Models.Entities.SiteDictionary", b =>

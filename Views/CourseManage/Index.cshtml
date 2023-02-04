@@ -1,6 +1,11 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using Learning_Site.DTO.CourseManage;
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<SiteUser> SignInManager
+@inject UserManager<SiteUser> UserManager
+
+@model CourseDTO
+
+
 @{
     Layout = "_Layout";
 }
@@ -13,66 +18,29 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Creator</th>
+                        <th scope="col">Action</th>
                     </tr>
                 </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>123</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>321</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>5151515</td>
-                </tr>
-            </tbody>
-           </table>
-           <hr />
-           <h1 class="mt-3">Added courses</h1>
-           <a href="" class="btn btn-success">Add Course</a>
-           <table class="table mt-2">
-                <thead>
+                @foreach(Course course in Model.SubscribedCourses)
+                {
+                    int i = 1;
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                    <th scope="row">@i</th>
+                    <td>@course.Name</td>
+                    <td>@course.Creator.UserName</td>
+                    <td>
+                        <form method="POST" asp-controller="Courses" asp-action="Unsubscribe" asp-route-id="@course.CourseId">
+                                <button class="btn btn-info">Unsubscribe</button>
+                        </form>
+                    </td>
                     </tr>
-                </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>123</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>321</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>5151515</td>
-                </tr>
+                    i++;
+                }
             </tbody>
            </table>
-
 
     </div>
 </div>

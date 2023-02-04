@@ -10,5 +10,10 @@ namespace Learning_Site.Models.Entities
         public ICollection<Course> CreatedCourses { get; set; }
 
         public SiteDictionary SiteDictionary { get; set; }
+
+        public bool IsAdmin()
+        {
+            return true;
+        }
     }
 }

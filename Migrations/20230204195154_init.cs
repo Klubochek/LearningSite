@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Learning_Site.Migrations
 {
-    public partial class Init : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -353,7 +353,7 @@ namespace Learning_Site.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Discriminator", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "32350725-439a-4b52-a2c4-181287146cbc", 0, "c8508928-9ef2-4289-870e-c0bba9c50911", "SiteUser", "admin@gmail.com", true, false, null, null, "ADMIN@GMAIL.COM", "AQAAAAEAACcQAAAAEBzD454CTWtGl5QqDpN45+WCBe45nHSKmIDsxlpmOSdPB5BM7qDw6rspWQxnM1J+DQ==", null, false, "290636ec-c2ff-446d-8cfc-e0d3ebd78176", false, "admin@gmail.com" });
+                values: new object[] { "32350725-439a-4b52-a2c4-181287146cbc", 0, "5086f731-00cb-48b5-97b1-5a932dd6e65b", "SiteUser", "admin@gmail.com", true, false, null, null, "ADMIN@GMAIL.COM", "AQAAAAEAACcQAAAAEI39zFQ8Z5oNJkRgPpkU7AobHscn+jjK5RWRtuLlC9xz383mhLgMqAbhqKxn0g/xpA==", null, false, "b6012dba-d9cb-493b-be6d-16d78b0e658e", false, "admin@gmail.com" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",

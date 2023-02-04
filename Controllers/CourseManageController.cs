@@ -1,4 +1,5 @@
-﻿using Learning_Site.Models;
+﻿using Learning_Site.DTO.CourseManage;
+using Learning_Site.Models;
 using Learning_Site.Models.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -25,11 +26,16 @@ namespace Learning_Site.Controllers
         {
             var user = _userManager.GetUserAsync(HttpContext.User).Result;
 
-
             if(user != null)
             {
-                var courses = _coursesRepository.GetUserCourses(user);
-                return View(courses);
+
+                var courseDTO = new CourseDTO()
+                {
+                    SubscribedCourses = _coursesRepository.GetSubscribedUserCourses(user),
+                    CreatedCourses = _coursesRepository.GetCreatedUserCourses(user)
+                };
+
+                return View(courseDTO);
             }
 
             return null;
