@@ -3,20 +3,19 @@ using Learning_Site.Models;
 using Learning_Site.Models.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Net;
 
 namespace Learning_Site.Controllers
 {
-    public class CourseManageController: Controller
+    public class CourseManageController : Controller
     {
 
         private readonly UserManager<SiteUser> _userManager;
         private readonly CoursesRepository _coursesRepository;
 
-        public CourseManageController(UserManager<SiteUser> userManager,CoursesRepository coursesRepository)
+        public CourseManageController(UserManager<SiteUser> userManager, CoursesRepository coursesRepository)
         {
             _userManager = userManager;
-            _coursesRepository= coursesRepository;
+            _coursesRepository = coursesRepository;
         }
 
         [HttpGet]
@@ -26,9 +25,8 @@ namespace Learning_Site.Controllers
         {
             var user = _userManager.GetUserAsync(HttpContext.User).Result;
 
-            if(user != null)
+            if (user != null)
             {
-
                 var courseDTO = new CourseDTO()
                 {
                     SubscribedCourses = _coursesRepository.GetSubscribedUserCourses(user),

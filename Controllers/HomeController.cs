@@ -16,15 +16,15 @@ namespace Learning_Site.Controllers
         public HomeController(ILogger<HomeController> logger, ApplicationDbContext context, CoursesRepository courseRepository)
         {
             _logger = logger;
-            _context= context;
-            _courseRepository= courseRepository;    
+            _context = context;
+            _courseRepository = courseRepository;
         }
 
         public IActionResult Index()
         {
             var search = Request.Query["search"].ToString();
             List<Course> courses = _context.Courses.Include(c => c.Creator).ToList();
-            if (search!=string.Empty)
+            if (search != string.Empty)
             {
                 courses = _courseRepository.GetCoursesListByKeyword(search);
             }

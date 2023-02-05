@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Learning_Site.Migrations
 {
-    public partial class Init : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -249,7 +249,9 @@ namespace Learning_Site.Migrations
                 {
                     SiteNoteId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    NoteName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Note = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Transcription = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Translate = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SiteDictionaryId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -337,7 +339,7 @@ namespace Learning_Site.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Discriminator", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "32350725-439a-4b52-a2c4-181287146cbc", 0, "98308d5a-f1ad-45c5-a951-c19dd3272799", "SiteUser", "admin@gmail.com", true, false, null, null, "ADMIN@GMAIL.COM", "AQAAAAEAACcQAAAAEPpHtpSipkZ7nsCeSwsj8LQk5CElrm8+BDdZMZF6csySDInoohyd3R8PxPL98HVKZw==", null, false, "9c656a51-9d84-4d99-ac92-c0617045657e", false, "admin@gmail.com" });
+                values: new object[] { "32350725-439a-4b52-a2c4-181287146cbc", 0, "727a34a1-dc06-4813-bd79-86fbc161a7a5", "SiteUser", "admin@gmail.com", true, false, null, null, "ADMIN@GMAIL.COM", "AQAAAAEAACcQAAAAEENsISIuEOR1oTzrBj/ocOHU0vrnfa2hjIIooqDIQLxjqqM3i+CsYQKYiGkpHP6UcA==", null, false, "d8ba6a91-eb6f-4507-aed2-434719939901", false, "admin@gmail.com" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
@@ -365,19 +367,19 @@ namespace Learning_Site.Migrations
                 columns: new[] { "LessonId", "CourseId", "Description", "Name", "Photo", "Video" },
                 values: new object[,]
                 {
-                    { 1, 1, null, "Video lesson 1 - History of development, current situation", null, "https://www.youtube.com/embed/d5mngMRh35M" },
-                    { 2, 1, null, "Video lesson 2 - The process of web development", null, "https://youtu.be/d0clV_2lyUA" },
-                    { 3, 1, null, "Video lesson 3 - Responsibilities and tasks of a Front-end developer", null, "https://youtu.be/jDNkTKy_rsE" }
+                    { 1, 1, "Video lesson 1 - History of development, current situation description", "Video lesson 1 - History of development, current situation", null, "https://www.youtube.com/embed/d5mngMRh35M" },
+                    { 2, 1, "Video lesson 2 - The process of web development description", "Video lesson 2 - The process of web development", "https://media.geeksforgeeks.org/wp-content/uploads/20200501201826/Untitled-Diagram-428.png", "https://www.youtube.com/embed/gQRsgFw7tcg" },
+                    { 3, 1, "Video lesson 3 - Responsibilities and tasks of a Front-end developer description", "Video lesson 3 - Responsibilities and tasks of a Front-end developer", "https://d341ezm4iqaae0.cloudfront.net/assets/2020/03/11141052/Roles_Responsibilities01-1024x585.jpg", "https://www.youtube.com/embed/9DJrsu-2Zvs" }
                 });
 
             migrationBuilder.InsertData(
                 table: "SiteNotes",
-                columns: new[] { "SiteNoteId", "NoteName", "SiteDictionaryId" },
+                columns: new[] { "SiteNoteId", "Note", "SiteDictionaryId", "Transcription", "Translate" },
                 values: new object[,]
                 {
-                    { 1, "Note 1", 1 },
-                    { 2, "Note 2", 1 },
-                    { 3, "Note 3", 1 }
+                    { 1, "Note 1", 1, null, null },
+                    { 2, "Note 2", 1, null, null },
+                    { 3, "Note 3", 1, null, null }
                 });
 
             migrationBuilder.InsertData(

@@ -14,6 +14,6 @@ namespace Learning_Site.DTO.CourseLesson
 
         public Lesson? PreviusLesson { get; set; }
 
-        public Lesson? NextLesson { get; set;  }
+        public Lesson? NextLesson { get; set; }
     }
 }

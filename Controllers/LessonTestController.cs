@@ -8,9 +8,9 @@ namespace Learning_Site.Controllers
     {
         private readonly ApplicationDbContext _context;
 
-        public LessonTestController(ApplicationDbContext context) 
+        public LessonTestController(ApplicationDbContext context)
         {
-            _context= context;
+            _context = context;
         }
 
         [HttpPost]
@@ -25,11 +25,12 @@ namespace Learning_Site.Controllers
 
             int ValidAnswers = 0;
 
-            foreach(var question in questions)
+            foreach (var question in questions)
             {
                 var questionId = question.Id.ToString();
                 var value = form[questionId];
-                if (question.CorrectAnswer.ToString() == value) {
+                if (question.CorrectAnswer.ToString() == value)
+                {
                     ValidAnswers++;
                 }
             }

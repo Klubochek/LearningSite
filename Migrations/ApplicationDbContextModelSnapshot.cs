@@ -256,6 +256,7 @@ namespace Learning_Site.Migrations
                         {
                             LessonId = 1,
                             CourseId = 1,
+                            Description = "Video lesson 1 - History of development, current situation description",
                             Name = "Video lesson 1 - History of development, current situation",
                             Video = "https://www.youtube.com/embed/d5mngMRh35M"
                         },
@@ -263,15 +264,19 @@ namespace Learning_Site.Migrations
                         {
                             LessonId = 2,
                             CourseId = 1,
+                            Description = "Video lesson 2 - The process of web development description",
                             Name = "Video lesson 2 - The process of web development",
-                            Video = "https://youtu.be/d0clV_2lyUA"
+                            Photo = "https://media.geeksforgeeks.org/wp-content/uploads/20200501201826/Untitled-Diagram-428.png",
+                            Video = "https://www.youtube.com/embed/gQRsgFw7tcg"
                         },
                         new
                         {
                             LessonId = 3,
                             CourseId = 1,
+                            Description = "Video lesson 3 - Responsibilities and tasks of a Front-end developer description",
                             Name = "Video lesson 3 - Responsibilities and tasks of a Front-end developer",
-                            Video = "https://youtu.be/jDNkTKy_rsE"
+                            Photo = "https://d341ezm4iqaae0.cloudfront.net/assets/2020/03/11141052/Roles_Responsibilities01-1024x585.jpg",
+                            Video = "https://www.youtube.com/embed/9DJrsu-2Zvs"
                         });
                 });
 
@@ -683,14 +688,14 @@ namespace Learning_Site.Migrations
                         {
                             Id = "32350725-439a-4b52-a2c4-181287146cbc",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "eb695f40-c3cb-42ed-8b73-8c2dce74367f",
+                            ConcurrencyStamp = "727a34a1-dc06-4813-bd79-86fbc161a7a5",
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEDkoeXKzbe91dPytcgsr8vts0AllTzoCOaZ3SMoyNm21GzoFTXTeNt+S0cLevjE8xg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEENsISIuEOR1oTzrBj/ocOHU0vrnfa2hjIIooqDIQLxjqqM3i+CsYQKYiGkpHP6UcA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "074fd3f3-8264-4c73-b504-f7beabfaefe1",
+                            SecurityStamp = "d8ba6a91-eb6f-4507-aed2-434719939901",
                             TwoFactorEnabled = false,
                             UserName = "admin@gmail.com"
                         });

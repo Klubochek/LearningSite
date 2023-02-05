@@ -2,7 +2,6 @@
 using Learning_Site.Models.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace Learning_Site.Controllers
 {
@@ -14,15 +13,15 @@ namespace Learning_Site.Controllers
 
         private readonly NoteRepository _noteRepository;
 
-        public DictionaryController(ApplicationDbContext context, UserManager<SiteUser> userManager,NoteRepository noteRepository)
+        public DictionaryController(ApplicationDbContext context, UserManager<SiteUser> userManager, NoteRepository noteRepository)
         {
-            _context= context;
-            _userManager= userManager;
-            _noteRepository= noteRepository;
+            _context = context;
+            _userManager = userManager;
+            _noteRepository = noteRepository;
         }
 
         [HttpGet]
-        [Route("dictionary/list")]
+        [Route("dictionary/notes")]
         public IActionResult Index()
         {
             var user = _userManager.GetUserAsync(HttpContext.User).Result;
@@ -34,24 +33,38 @@ namespace Learning_Site.Controllers
             return View(notes);
         }
 
+        [HttpGet]
+        [Route("dictionary/note/create")]
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+
         [HttpPost]
-        [Route("dictionary/list/note/{note}/transcription/{transcription}/translate/{translate}")]
-        public IActionResult Create(string note,string transcription,string translate) 
+        [Route("dictionary/notes")]
+        public IActionResult Save()
         {
             var user = _userManager.GetUserAsync(HttpContext.User).Result;
 
             var dictionary = _context.SiteDictionary.FirstOrDefault(d => d.SiteUserId == user.Id);
+
+            var form = Request.Form;
+
             _noteRepository.SaveNote(new SiteNote()
             {
 
-                SiteDictionaryId=dictionary.SiteDictionaryId,
-                Note=note,
-                Translate=translate,
-                Transcription=transcription,
-                SiteNoteId=_context.SiteNotes.ToList().Count
+                SiteDictionaryId = dictionary.SiteDictionaryId,
+                Note = form["note"],
+                Translate = form["translate"],
+                Transcription = form["transcription"],
             });
+
             return RedirectToAction("Index");
         }
+
+
         [HttpPost]
         [Route("dictionary/list/note/{id}")]
         public IActionResult Delete(int id)
@@ -70,7 +83,7 @@ namespace Learning_Site.Controllers
                 _context.SaveChanges();
             }
 
-            return RedirectToAction("Details", new { id = id });
+            return RedirectToAction("Index");
         }
     }
 }

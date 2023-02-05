@@ -8,6 +8,7 @@
 
 @{
     Layout = "_Layout";
+    var i = 1;
 }
 
 <div class="container-fluid py-5">
@@ -26,10 +27,9 @@
             <tbody>
                 @foreach(Course course in Model.SubscribedCourses)
                 {
-                    int i = 1;
                     <tr>
                     <th scope="row">@i</th>
-                    <td>@course.Name</td>
+                        <td><a class="btn btn-info" asp-controller="Courses" asp-action="Details" asp-route-id="@course.CourseId">@course.Name</a></td>
                     <td>@course.Creator.UserName</td>
                     <td>
                         <form method="POST" asp-controller="Courses" asp-action="Unsubscribe" asp-route-id="@course.CourseId">

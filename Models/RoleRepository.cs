@@ -7,9 +7,9 @@ namespace Learning_Site.Models
     public class RoleRepository
     {
         private readonly ApplicationDbContext _context;
-        public RoleRepository(ApplicationDbContext context) 
-        { 
-             _context = context;
+        public RoleRepository(ApplicationDbContext context)
+        {
+            _context = context;
         }
         public List<IdentityUserRole<string>> UserRoles(SiteUser user)
         {

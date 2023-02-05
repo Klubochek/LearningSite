@@ -38,15 +38,9 @@
                                 {          
                                     <a class="btn btn-info mb-2" asp-controller="CourseLesson" asp-action="Details" asp-route-courseId="@Model.CourseId" asp-route-lessonId="@lesson.LessonId">@lesson.Name</a> <br />
                                 }
-
                             </div>
-
-
                             <div class="d-inline-block position-relative text-secondary text-uppercase pb-2">You are subscribed to the course</div>
-
-
                         }
-
                          @if (!Model.SiteUsers.Contains(UserManager.GetUserAsync(User).Result))
                         {
                         <form method="POST" asp-controller="Courses" asp-action="Subscribe" asp-route-id="@Model.CourseId">
@@ -58,8 +52,6 @@
                             <i class="fa fa-user" aria-hidden="true"><span class="ml-2">@Model.SiteUsers.Count signed participant</span></i>
                         </div>
                     }
-                   
-              
                 </div>
             </div>
         </div>

@@ -20,19 +20,30 @@
                         <h1 class="display-4">@Model.CurrentLesson.Name</h1>
                     </div>
 
-                   <iframe id="7c5ad6cf87614a2685e3bce87b92e56d" 
+                    <p>@Model.CurrentLesson.Description</p>
+
+                    @if(Model.CurrentLesson.Video != null)
+                    {
+                        <iframe id="7c5ad6cf87614a2685e3bce87b92e56d" 
                        frameborder="0" allowfullscreen="1" 
                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                        title="course-v1:LITS+114+2020_T3 video_webui_1_2_3" width="640" height="360"
                             src="@Model.CurrentLesson.Video;
-wmode=transparent&amp;rel=0&amp;showinfo=0&amp;enablejsapi=1&amp;modestbranding=1&amp;cc_load_policy=0&amp;html5=1&amp;origin=https%3A%2F%2Fcourses.prometheus.org.ua&amp;widgetid=1" tabindex="-1" style="height: 607.5px; width: 1080px; top: 20.25px; left: 0px;" data-gtm-yt-inspected-8="true"></iframe>
+wmode=transparent&amp;rel=0&amp;showinfo=0&amp;enablejsapi=1&amp;modestbranding=1&amp;cc_load_policy=0&amp;html5=1&amp;origin=https%3A%2F%2Fcourses.prometheus.org.ua&amp;widgetid=1" tabindex="-1" style="height: 607.5px; width: 1080px; top: 20.25px; left: 0px;" data-gtm-yt-inspected-8="true">
+                    </iframe>
+                    }
+
+                       @if(Model.CurrentLesson.Photo != null)
+                    {
+                       <img src="@Model.CurrentLesson.Photo" width="800" height="500">
+                    }
                 </div>
 
                 @if (Model.Test != null)
                 {
                     @if(ViewData["ValidAnswers"] != null)
                     {
-                        <p>Вы ответили на тест, количество правильных ответов - @ViewData["ValidAnswers"]</p>
+                        <p>You answered the test, the number of correct answers - @ViewData["ValidAnswers"]</p>
                     }
                     else
                     {
@@ -53,11 +64,7 @@ wmode=transparent&amp;rel=0&amp;showinfo=0&amp;enablejsapi=1&amp;modestbranding=
                     }
                      <button type="submit" class="btn btn-success mb-2">Save</button>
                     </form>
-                    }
-
-                    
-                   
-                                           
+                    }                    
                 }
 
                 @if(Model.PreviusLesson != null)

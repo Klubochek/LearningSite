@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using static System.Net.WebRequestMethods;
 
 namespace Learning_Site.Data
 {
@@ -20,20 +19,14 @@ namespace Learning_Site.Data
         public DbSet<Question> Questions { get; set; }
         public DbSet<Answer> Answers { get; set; }
 
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options)
-        {
-         
-            
-        }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-
             CreateReleationship(builder);
             CreateEntities(builder);
-            
+
         }
         private void CreateReleationship(ModelBuilder builder)
         {
@@ -42,18 +35,11 @@ namespace Learning_Site.Data
                 .WithOne(u => u.Creator)
                 .HasForeignKey(u => u.CreatorId)
                 .OnDelete(DeleteBehavior.Restrict);
-
-            //builder.Entity<Question>()
-            //    .HasMany<Answer>(q => q.Answers)
-            //    .WithOne(a => a.Question)
-            //    .HasForeignKey(a => a.QuestionId)
-            //    .OnDelete(DeleteBehavior.Restrict);
         }
 
         private void CreateEntities(ModelBuilder builder)
         {
-            // через билдер можно добавлять дефолтные сиды, которые будут добавлять при первой миграции??
-            // добавляем сид админроли и обычного юзера
+
             builder.Entity<IdentityRole>().HasData(new IdentityRole
             {
                 Name = "Admin",
@@ -68,7 +54,7 @@ namespace Learning_Site.Data
                 Id = _defaultUserRoleId,
                 ConcurrencyStamp = _defaultUserRoleId
             });
-            //Создаем админа как класс
+
             var Admin = new SiteUser()
             {
                 Id = _adminId,
@@ -77,13 +63,14 @@ namespace Learning_Site.Data
                 EmailConfirmed = true,
                 NormalizedUserName = "ADMIN@GMAIL.COM",
             };
-            // хешим пароль и добавляем сущность в БД
+
+
             var hasher = new PasswordHasher<SiteUser>();
             var hashedPass = hasher.HashPassword(Admin, "mypassword_?");
             Admin.PasswordHash = hashedPass;
             builder.Entity<SiteUser>().HasData(Admin);
 
-            //для теста добавил ему словарь
+
             var AdminDictionary = new SiteDictionary()
             {
                 SiteDictionaryId = 1,
@@ -115,16 +102,12 @@ namespace Learning_Site.Data
                 SiteNoteId = 3
             });
 
-
-
-            // Таблица посредник между ролями и юзерами UserRole. Добавляем в нее рольID и юзерID для дефолтного юзера админ с ролью админ
             builder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
             {
                 RoleId = _adminRoleId,
                 UserId = _adminId
             });
 
-            //Добавляем курсы
             var course1 = new Course
             {
                 CourseId = 1,
@@ -163,14 +146,13 @@ namespace Learning_Site.Data
             };
             builder.Entity<Course>().HasData(course4);
 
-
-
             var lesson1 = new Lesson
             {
                 LessonId = 1,
                 Name = "Video lesson 1 - History of development, current situation",
                 Video = "https://www.youtube.com/embed/d5mngMRh35M",
-                CourseId = course1.CourseId
+                CourseId = course1.CourseId,
+                Description = "Video lesson 1 - History of development, current situation description"
             };
             builder.Entity<Lesson>().HasData(lesson1);
 
@@ -178,16 +160,20 @@ namespace Learning_Site.Data
             {
                 LessonId = 2,
                 Name = "Video lesson 2 - The process of web development",
-                Video = "https://youtu.be/d0clV_2lyUA",
-                CourseId = course1.CourseId
+                Video = "https://www.youtube.com/embed/gQRsgFw7tcg",
+                Photo = "https://media.geeksforgeeks.org/wp-content/uploads/20200501201826/Untitled-Diagram-428.png",
+                CourseId = course1.CourseId,
+                Description = "Video lesson 2 - The process of web development description"
             };
             builder.Entity<Lesson>().HasData(lesson2);
             var lesson3 = new Lesson
             {
                 LessonId = 3,
                 Name = "Video lesson 3 - Responsibilities and tasks of a Front-end developer",
-                Video = "https://youtu.be/jDNkTKy_rsE",
-                CourseId = course1.CourseId
+                Video = "https://www.youtube.com/embed/9DJrsu-2Zvs",
+                Photo = "https://d341ezm4iqaae0.cloudfront.net/assets/2020/03/11141052/Roles_Responsibilities01-1024x585.jpg",
+                CourseId = course1.CourseId,
+                Description = "Video lesson 3 - Responsibilities and tasks of a Front-end developer description"
             };
             builder.Entity<Lesson>().HasData(lesson3);
 
@@ -198,7 +184,7 @@ namespace Learning_Site.Data
                 LessonId = lesson3.LessonId
             };
             builder.Entity<Test>().HasData(test1);
-            var question1= new Question
+            var question1 = new Question
             {
                 Id = 1,
                 QuestionDiscription = "What is web development ?",
@@ -226,7 +212,7 @@ namespace Learning_Site.Data
                 QuestionId = question1.Id
 
             });
-            // question 2
+
             var question2 = new Question
             {
                 Id = 2,
@@ -265,7 +251,7 @@ namespace Learning_Site.Data
                 QuestionId = question2.Id
 
             });
-            //question 3
+
             var question3 = new Question
             {
                 Id = 3,
@@ -310,7 +296,7 @@ namespace Learning_Site.Data
                 QuestionId = question3.Id
 
             });
-            //Questions 4
+
             var question4 = new Question
             {
                 Id = 4,
@@ -336,8 +322,8 @@ namespace Learning_Site.Data
             {
                 AnswerId = 15,
                 AnswerText = "A static web page will remain the same until someone manually changes it. Dynamic web pages are behavioral in nature and able to produce excellent content for different visitors.",
-                QuestionId=  question4.Id
-          
+                QuestionId = question4.Id
+
             });
             builder.Entity<Answer>().HasData(new Answer
             {
@@ -347,6 +333,5 @@ namespace Learning_Site.Data
 
             });
         }
-        
     }
 }

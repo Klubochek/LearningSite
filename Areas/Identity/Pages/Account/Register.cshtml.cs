@@ -10,6 +10,7 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading;
 using System.Threading.Tasks;
+using Learning_Site.Data;
 using Learning_Site.Models.Entities;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
@@ -30,13 +31,16 @@ namespace Learning_Site.Areas.Identity.Pages.Account
         private readonly IUserEmailStore<SiteUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly ApplicationDbContext _context;
 
         public RegisterModel(
             UserManager<SiteUser> userManager,
             IUserStore<SiteUser> userStore,
             SignInManager<SiteUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            ApplicationDbContext context
+            )
         {
             _userManager = userManager;
             _userStore = userStore;
@@ -44,6 +48,7 @@ namespace Learning_Site.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _context = context;
         }
 
         /// <summary>
@@ -123,7 +128,18 @@ namespace Learning_Site.Areas.Identity.Pages.Account
                 {
                     _logger.LogInformation("User created a new account with password.");
 
+                    SiteDictionary dictionary = new SiteDictionary()
+                    {
+                        Name = "Dictionary",
+                        SiteUser = user,
+                        SiteUserId = user.Id
+                    };
+
+                    _context.SiteDictionary.Add(dictionary);
+                    _context.SaveChanges();
+
                     var userId = await _userManager.GetUserIdAsync(user);
+                  
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(

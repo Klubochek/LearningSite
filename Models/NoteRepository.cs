@@ -24,7 +24,7 @@ namespace Learning_Site.Models.Entities
             }
             else
             {
-                _context.Entry(note).State = EntityState.Added;
+                _context.SiteNotes.Add(note);
                 _context.SaveChanges();
                 return;
             }

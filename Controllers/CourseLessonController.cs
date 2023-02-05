@@ -1,18 +1,17 @@
 ﻿using Learning_Site.Data;
 using Learning_Site.DTO.CourseLesson;
-using Learning_Site.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Learning_Site.Controllers
 {
-    public class CourseLessonController: Controller
+    public class CourseLessonController : Controller
     {
         private readonly ApplicationDbContext _context;
 
         public CourseLessonController(ApplicationDbContext context)
         {
-            _context= context;  
+            _context = context;
         }
 
         [HttpGet]
@@ -20,6 +19,12 @@ namespace Learning_Site.Controllers
         public IActionResult Details(int courseId, int lessonId)
         {
             var course = _context.Courses.Include(c => c.Lessons).FirstOrDefault(c => c.CourseId == courseId);
+
+            if (course == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
             var lesson = _context.Lessons.Include(l => l.Test).FirstOrDefault(l => l.LessonId == lessonId);
 
             var lessons = course.Lessons;

@@ -3,42 +3,43 @@
 
 @model List<SiteNote>
 @{
+    var i = 1;
     Layout = "_Layout";
 }
 
 <div class="container-fluid py-5">
     <div class="container py-5">
-
         <h1>Notes</h1>
+        <a asp-controller="Dictionary" asp-action="Create" class="btn btn-warning mb-2">Add Note</a>
         <table class="table">
             <thead>
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
+                    <th scope="col">Transcription</th>
+                    <th scope="col">Translate</th> 
                     <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (SiteNote note in Model)
                 {
-                    int i = 1;
+                    var noteTranscription = note.Transcription != null ? note.Transcription : "-";
+                    var NoteTranslate = note.Translate != null ? note.Translate : "-";
+
                     <tr>
                         <th scope="row">@i</th>
                         <td>@note.Note</td>
+                        <td>@noteTranscription</td>
+                        <td>@NoteTranslate</td>
                         <td>
-                            <form method="POST" asp-controller="Dictionary" asp-action="Create" asp-route-id="@note.SiteNoteId">
-                                <button class="btn btn-info">Edit</button>
-                            </form>
-                                <form method="POST" asp-controller="Dictionary" asp-action="Delete" asp-route-id="@note.SiteNoteId">
+                            <form method="POST"  asp-controller="Dictionary" asp-action="Delete" asp-route-id="@note.SiteNoteId">
                                 <button class="btn btn-info">Delete</button>
                             </form>
                         </td>
                     </tr>
                     i++;
                 }
-                <form method="POST" asp-controller="Dictionary" asp-action="Create" >
-                    <button class="btn btn-info">Delete</button>
-                </form>
             </tbody>
         </table>
 
