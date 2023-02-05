@@ -26,13 +26,19 @@
                         <th scope="row">@i</th>
                         <td>@note.Note</td>
                         <td>
-                            <form method="POST" asp-controller="Courses" asp-action="Unsubscribe" asp-route-id="@note.SiteNoteId">
+                            <form method="POST" asp-controller="Dictionary" asp-action="Create" asp-route-id="@note.SiteNoteId">
+                                <button class="btn btn-info">Edit</button>
+                            </form>
+                                <form method="POST" asp-controller="Dictionary" asp-action="Delete" asp-route-id="@note.SiteNoteId">
                                 <button class="btn btn-info">Delete</button>
                             </form>
                         </td>
                     </tr>
                     i++;
                 }
+                <form method="POST" asp-controller="Dictionary" asp-action="Create" >
+                    <button class="btn btn-info">Delete</button>
+                </form>
             </tbody>
         </table>
 

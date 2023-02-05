@@ -19,6 +19,7 @@ builder.Services.AddDefaultIdentity<SiteUser>(options => options.SignIn.RequireC
 
 builder.Services.AddTransient<CoursesRepository,CoursesRepository>();
 builder.Services.AddTransient<RoleRepository, RoleRepository>();
+builder.Services.AddTransient<NoteRepository, NoteRepository>();
 
 
 builder.Services.AddControllersWithViews();
