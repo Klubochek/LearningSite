@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Learning_Site.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230204215844_TestMigration")]
-    partial class TestMigration
+    [Migration("20230205104412_Init")]
+    partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -95,7 +95,7 @@ namespace Learning_Site.Migrations
                         {
                             AnswerId = 6,
                             AnswerText = "HTML/CSS/PHP",
-                            QuestionId = 0
+                            QuestionId = 2
                         },
                         new
                         {
@@ -384,6 +384,26 @@ namespace Learning_Site.Migrations
                     b.HasIndex("SiteDictionaryId");
 
                     b.ToTable("SiteNotes");
+
+                    b.HasData(
+                        new
+                        {
+                            SiteNoteId = 1,
+                            NoteName = "Note 1",
+                            SiteDictionaryId = 1
+                        },
+                        new
+                        {
+                            SiteNoteId = 2,
+                            NoteName = "Note 2",
+                            SiteDictionaryId = 1
+                        },
+                        new
+                        {
+                            SiteNoteId = 3,
+                            NoteName = "Note 3",
+                            SiteDictionaryId = 1
+                        });
                 });
 
             modelBuilder.Entity("Learning_Site.Models.Entities.Test", b =>
@@ -659,14 +679,14 @@ namespace Learning_Site.Migrations
                         {
                             Id = "32350725-439a-4b52-a2c4-181287146cbc",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e6543113-266f-4811-8955-b00d8f5b287d",
+                            ConcurrencyStamp = "98308d5a-f1ad-45c5-a951-c19dd3272799",
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEAfkiiI9Knnnewc9AP5EbmqS5mlmcAP40ITGhS+8Yzqd7+E7J4JHn+s4deKp/g9N6w==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPpHtpSipkZ7nsCeSwsj8LQk5CElrm8+BDdZMZF6csySDInoohyd3R8PxPL98HVKZw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6a6150f9-39fb-4f85-b616-438d06946b56",
+                            SecurityStamp = "9c656a51-9d84-4d99-ac92-c0617045657e",
                             TwoFactorEnabled = false,
                             UserName = "admin@gmail.com"
                         });
@@ -736,13 +756,11 @@ namespace Learning_Site.Migrations
 
             modelBuilder.Entity("Learning_Site.Models.Entities.SiteNote", b =>
                 {
-                    b.HasOne("Learning_Site.Models.Entities.SiteDictionary", "SiteDictionary")
+                    b.HasOne("Learning_Site.Models.Entities.SiteDictionary", null)
                         .WithMany("Notes")
                         .HasForeignKey("SiteDictionaryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("SiteDictionary");
                 });
 
             modelBuilder.Entity("Learning_Site.Models.Entities.Test", b =>

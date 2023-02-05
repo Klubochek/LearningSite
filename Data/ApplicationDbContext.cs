@@ -90,7 +90,30 @@ namespace Learning_Site.Data
                 Name = "AdminDictionary",
                 SiteUserId = Admin.Id
             };
+
             builder.Entity<SiteDictionary>().HasData(AdminDictionary);
+
+
+            builder.Entity<SiteNote>().HasData(new SiteNote()
+            {
+                Note = "Note 1",
+                SiteNoteId = 1,
+                SiteDictionaryId = AdminDictionary.SiteDictionaryId
+            });
+
+            builder.Entity<SiteNote>().HasData(new SiteNote()
+            {
+                SiteDictionaryId = AdminDictionary.SiteDictionaryId,
+                Note = "Note 2",
+                SiteNoteId = 2
+            });
+
+            builder.Entity<SiteNote>().HasData(new SiteNote()
+            {
+                SiteDictionaryId = AdminDictionary.SiteDictionaryId,
+                Note = "Note 3",
+                SiteNoteId = 3
+            });
 
 
 
@@ -214,12 +237,10 @@ namespace Learning_Site.Data
             };
             builder.Entity<Question>().HasData(question2);
 
-
             builder.Entity<Answer>().HasData(new Answer
             {
                 AnswerId = 4,
                 AnswerText = "HTML/CSS",
-                //Question = question2,
                 QuestionId = question2.Id
 
             });
@@ -227,7 +248,6 @@ namespace Learning_Site.Data
             {
                 AnswerId = 5,
                 AnswerText = "HTML/CSS/JavaScript",
-                //Question = question2,
                 QuestionId = question2.Id
 
             });
@@ -235,13 +255,13 @@ namespace Learning_Site.Data
             {
                 AnswerId = 6,
                 AnswerText = "HTML/CSS/PHP",
+                QuestionId = question2.Id
 
             });
             builder.Entity<Answer>().HasData(new Answer
             {
                 AnswerId = 7,
                 AnswerText = "HTML/CSS/JavaScript/PHP",
-                //Question = question2,
                 QuestionId = question2.Id
 
             });
@@ -259,7 +279,6 @@ namespace Learning_Site.Data
             {
                 AnswerId = 8,
                 AnswerText = "Working with frameworks and libraries",
-                //Question = question3,
                 QuestionId = question3.Id
 
             });
@@ -312,7 +331,6 @@ namespace Learning_Site.Data
                 AnswerId = 14,
                 AnswerText = "Static - can only display information, but do not allow the user to change it or interact with the page in any way; dynamic - respond to user actions.",
                 QuestionId = question4.Id
-
             });
             builder.Entity<Answer>().HasData(new Answer
             {

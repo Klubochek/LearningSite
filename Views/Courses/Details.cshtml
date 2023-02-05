@@ -36,7 +36,7 @@
                             <div class="lessons">
                                 @foreach(Lesson lesson in Model.Lessons)
                                 {          
-                                    <a class="link-primary" asp-controller="CourseLesson" asp-action="Details" asp-route-courseId="@Model.CourseId" asp-route-lessonId="@lesson.LessonId">@lesson.Name</a> <br />
+                                    <a class="btn btn-info mb-2" asp-controller="CourseLesson" asp-action="Details" asp-route-courseId="@Model.CourseId" asp-route-lessonId="@lesson.LessonId">@lesson.Name</a> <br />
                                 }
 
                             </div>

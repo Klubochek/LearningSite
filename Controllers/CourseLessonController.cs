@@ -44,6 +44,7 @@ namespace Learning_Site.Controllers
                 courseLessonDto.Questions = _context.Questions.Include(q => q.Answers).Where(q => q.TestId == test.TestId).ToList();
             }
 
+            ViewData["ValidAnswers"] = TempData["ValidAnswers"];
 
             return View(courseLessonDto);
         }

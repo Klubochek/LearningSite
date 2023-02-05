@@ -28,6 +28,9 @@ namespace Learning_Site.Controllers
             {
                 courses = _courseRepository.GetCoursesListByKeyword(search);
             }
+
+            ViewData["Search"] = search;
+
             return View(courses);
         }
 

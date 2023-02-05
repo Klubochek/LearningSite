@@ -1,0 +1,40 @@
+﻿@using Learning_Site.DTO.CourseManage;
+@using Microsoft.AspNetCore.Identity
+
+@model List<SiteNote>
+@{
+    Layout = "_Layout";
+}
+
+<div class="container-fluid py-5">
+    <div class="container py-5">
+
+        <h1>Notes</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (SiteNote note in Model)
+                {
+                    int i = 1;
+                    <tr>
+                        <th scope="row">@i</th>
+                        <td>@note.Note</td>
+                        <td>
+                            <form method="POST" asp-controller="Courses" asp-action="Unsubscribe" asp-route-id="@note.SiteNoteId">
+                                <button class="btn btn-info">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    i++;
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>

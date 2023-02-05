@@ -28,26 +28,47 @@
 wmode=transparent&amp;rel=0&amp;showinfo=0&amp;enablejsapi=1&amp;modestbranding=1&amp;cc_load_policy=0&amp;html5=1&amp;origin=https%3A%2F%2Fcourses.prometheus.org.ua&amp;widgetid=1" tabindex="-1" style="height: 607.5px; width: 1080px; top: 20.25px; left: 0px;" data-gtm-yt-inspected-8="true"></iframe>
                 </div>
 
+                @if (Model.Test != null)
+                {
+                    @if(ViewData["ValidAnswers"] != null)
+                    {
+                        <p>Вы ответили на тест, количество правильных ответов - @ViewData["ValidAnswers"]</p>
+                    }
+                    else
+                    {
+                        <h1 class="form-text" style="color:gray">Questions</h1>
+                    <form method="POST" asp-controller="LessonTest" asp-action="SubmitHandle" asp-route-lessonId="@Model.CurrentLesson.LessonId" asp-route-testId="@Model.Test.TestId">
+                    @foreach (var question in Model.Questions)
+                    {
+                            <div class="font-weight-bold"> @question.QuestionDiscription </div>
+                            <div class="ml-5 ml-5">
+                                @foreach (var answer in question.Answers)
+                                {
+                            
+                                    <input class="form-check-input" type="radio" name="@question.Id" value="@answer.AnswerId"> @answer.AnswerText
+                                    <br />
+                        
+                                }
+                             </div>
+                    }
+                     <button type="submit" class="btn btn-success mb-2">Save</button>
+                    </form>
+                    }
+
+                    
+                   
+                                           
+                }
 
                 @if(Model.PreviusLesson != null)
                 {
-                    <a class="link-primary" asp-controller="CourseLesson" asp-action="Details" asp-route-courseId="@Model.Course.CourseId" asp-route-lessonId="@Model.PreviusLesson.LessonId">@Model.PreviusLesson.Name</a> <br />
+                    <a class="btn btn-info mb-2" asp-controller="CourseLesson" asp-action="Details" asp-route-courseId="@Model.Course.CourseId" asp-route-lessonId="@Model.PreviusLesson.LessonId">@Model.PreviusLesson.Name</a> <br />
                 }
                 @if (Model.NextLesson != null)
                 {
-                    <a class="link-primary" asp-controller="CourseLesson" asp-action="Details" asp-route-courseId="@Model.Course.CourseId" asp-route-lessonId="@Model.NextLesson.LessonId">@Model.NextLesson.Name</a> <br />
+                    <a class="btn btn-info" asp-controller="CourseLesson" asp-action="Details" asp-route-courseId="@Model.Course.CourseId" asp-route-lessonId="@Model.NextLesson.LessonId">@Model.NextLesson.Name</a> <br />
                 }
-                @if (Model.Test != null)
-                {
-                    foreach(var question in Model.Questions)
-                    {
-                        <p>@question.QuestionDiscription</p>
-                        foreach(var answer in question.Answers)
-                        {
-                            <p>@answer.AnswerText</p>
-                        }
-                    }
-                }
+                
             </div>
         </div>
     </div>

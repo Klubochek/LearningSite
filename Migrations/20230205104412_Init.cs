@@ -5,24 +5,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Learning_Site.Migrations
 {
-    public partial class init : Migration
+    public partial class Init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "Answers",
-                columns: table => new
-                {
-                    AnswerId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    AnswerText = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    QuestionId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Answers", x => x.AnswerId);
-                });
-
             migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
@@ -318,42 +304,40 @@ namespace Learning_Site.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.InsertData(
-                table: "Answers",
-                columns: new[] { "AnswerId", "AnswerText", "QuestionId" },
-                values: new object[,]
+            migrationBuilder.CreateTable(
+                name: "Answers",
+                columns: table => new
                 {
-                    { 1, "The process of creating web applications and websites", 1 },
-                    { 2, "Web programming is not separated from the concept of programming in general", 1 },
-                    { 3, "All options are wrong", 1 },
-                    { 4, "HTML/CSS", 2 },
-                    { 5, "HTML/CSS/JavaScript", 2 },
-                    { 6, "HTML/CSS/PHP", 0 },
-                    { 7, "HTML/CSS/JavaScript/PHP", 2 },
-                    { 8, "Working with frameworks and libraries", 3 },
-                    { 9, "Code optimization", 3 },
-                    { 10, "Writing documentation", 3 },
-                    { 11, "Creating a web page markup", 3 },
-                    { 12, "Management of the development team", 3 },
-                    { 13, "Static - written only in HTML/CSS (maybe some Javascript effects), and dynamic - in HTML/CSS/Javascript + server programming languages.", 4 },
-                    { 14, "Static - can only display information, but do not allow the user to change it or interact with the page in any way; dynamic - respond to user actions.", 4 },
-                    { 15, "A static web page will remain the same until someone manually changes it. Dynamic web pages are behavioral in nature and able to produce excellent content for different visitors.", 4 },
-                    { 16, "All answers are correct", 4 }
+                    AnswerId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    AnswerText = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    QuestionId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Answers", x => x.AnswerId);
+                    table.ForeignKey(
+                        name: "FK_Answers_Questions_QuestionId",
+                        column: x => x.QuestionId,
+                        principalTable: "Questions",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[,]
-                {
-                    { "5c9d18af-ae43-49e3-a698-d284d4ff03c2", "5c9d18af-ae43-49e3-a698-d284d4ff03c2", "Admin", "ADMIN" },
-                    { "73329a1f-ccb8-4902-b254-574617713ad8", "73329a1f-ccb8-4902-b254-574617713ad8", "DefaultUser", "DEFAULTUSER" }
-                });
+                values: new object[] { "5c9d18af-ae43-49e3-a698-d284d4ff03c2", "5c9d18af-ae43-49e3-a698-d284d4ff03c2", "Admin", "ADMIN" });
+
+            migrationBuilder.InsertData(
+                table: "AspNetRoles",
+                columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
+                values: new object[] { "73329a1f-ccb8-4902-b254-574617713ad8", "73329a1f-ccb8-4902-b254-574617713ad8", "DefaultUser", "DEFAULTUSER" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Discriminator", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "32350725-439a-4b52-a2c4-181287146cbc", 0, "5086f731-00cb-48b5-97b1-5a932dd6e65b", "SiteUser", "admin@gmail.com", true, false, null, null, "ADMIN@GMAIL.COM", "AQAAAAEAACcQAAAAEI39zFQ8Z5oNJkRgPpkU7AobHscn+jjK5RWRtuLlC9xz383mhLgMqAbhqKxn0g/xpA==", null, false, "b6012dba-d9cb-493b-be6d-16d78b0e658e", false, "admin@gmail.com" });
+                values: new object[] { "32350725-439a-4b52-a2c4-181287146cbc", 0, "98308d5a-f1ad-45c5-a951-c19dd3272799", "SiteUser", "admin@gmail.com", true, false, null, null, "ADMIN@GMAIL.COM", "AQAAAAEAACcQAAAAEPpHtpSipkZ7nsCeSwsj8LQk5CElrm8+BDdZMZF6csySDInoohyd3R8PxPL98HVKZw==", null, false, "9c656a51-9d84-4d99-ac92-c0617045657e", false, "admin@gmail.com" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
@@ -379,17 +363,22 @@ namespace Learning_Site.Migrations
             migrationBuilder.InsertData(
                 table: "Lessons",
                 columns: new[] { "LessonId", "CourseId", "Description", "Name", "Photo", "Video" },
-                values: new object[] { 1, 1, null, "Video lesson 1 - History of development, current situation", null, "https://www.youtube.com/embed/d5mngMRh35M" });
+                values: new object[,]
+                {
+                    { 1, 1, null, "Video lesson 1 - History of development, current situation", null, "https://www.youtube.com/embed/d5mngMRh35M" },
+                    { 2, 1, null, "Video lesson 2 - The process of web development", null, "https://youtu.be/d0clV_2lyUA" },
+                    { 3, 1, null, "Video lesson 3 - Responsibilities and tasks of a Front-end developer", null, "https://youtu.be/jDNkTKy_rsE" }
+                });
 
             migrationBuilder.InsertData(
-                table: "Lessons",
-                columns: new[] { "LessonId", "CourseId", "Description", "Name", "Photo", "Video" },
-                values: new object[] { 2, 1, null, "Video lesson 2 - The process of web development", null, "https://youtu.be/d0clV_2lyUA" });
-
-            migrationBuilder.InsertData(
-                table: "Lessons",
-                columns: new[] { "LessonId", "CourseId", "Description", "Name", "Photo", "Video" },
-                values: new object[] { 3, 1, null, "Video lesson 3 - Responsibilities and tasks of a Front-end developer", null, "https://youtu.be/jDNkTKy_rsE" });
+                table: "SiteNotes",
+                columns: new[] { "SiteNoteId", "NoteName", "SiteDictionaryId" },
+                values: new object[,]
+                {
+                    { 1, "Note 1", 1 },
+                    { 2, "Note 2", 1 },
+                    { 3, "Note 3", 1 }
+                });
 
             migrationBuilder.InsertData(
                 table: "Tests",
@@ -406,6 +395,34 @@ namespace Learning_Site.Migrations
                     { 3, 12, "What is NOT included in the tasks of a web developer?", 1 },
                     { 4, 16, "What is the difference between static and dynamic web pages?", 1 }
                 });
+
+            migrationBuilder.InsertData(
+                table: "Answers",
+                columns: new[] { "AnswerId", "AnswerText", "QuestionId" },
+                values: new object[,]
+                {
+                    { 1, "The process of creating web applications and websites", 1 },
+                    { 2, "Web programming is not separated from the concept of programming in general", 1 },
+                    { 3, "All options are wrong", 1 },
+                    { 4, "HTML/CSS", 2 },
+                    { 5, "HTML/CSS/JavaScript", 2 },
+                    { 6, "HTML/CSS/PHP", 2 },
+                    { 7, "HTML/CSS/JavaScript/PHP", 2 },
+                    { 8, "Working with frameworks and libraries", 3 },
+                    { 9, "Code optimization", 3 },
+                    { 10, "Writing documentation", 3 },
+                    { 11, "Creating a web page markup", 3 },
+                    { 12, "Management of the development team", 3 },
+                    { 13, "Static - written only in HTML/CSS (maybe some Javascript effects), and dynamic - in HTML/CSS/Javascript + server programming languages.", 4 },
+                    { 14, "Static - can only display information, but do not allow the user to change it or interact with the page in any way; dynamic - respond to user actions.", 4 },
+                    { 15, "A static web page will remain the same until someone manually changes it. Dynamic web pages are behavioral in nature and able to produce excellent content for different visitors.", 4 },
+                    { 16, "All answers are correct", 4 }
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Answers_QuestionId",
+                table: "Answers",
+                column: "QuestionId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -509,19 +526,19 @@ namespace Learning_Site.Migrations
                 name: "CourseSiteUser");
 
             migrationBuilder.DropTable(
-                name: "Questions");
+                name: "SiteNotes");
 
             migrationBuilder.DropTable(
-                name: "SiteNotes");
+                name: "Questions");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "Tests");
+                name: "SiteDictionary");
 
             migrationBuilder.DropTable(
-                name: "SiteDictionary");
+                name: "Tests");
 
             migrationBuilder.DropTable(
                 name: "Lessons");
