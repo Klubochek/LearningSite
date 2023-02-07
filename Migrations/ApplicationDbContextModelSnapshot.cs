@@ -688,14 +688,14 @@ namespace Learning_Site.Migrations
                         {
                             Id = "32350725-439a-4b52-a2c4-181287146cbc",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "727a34a1-dc06-4813-bd79-86fbc161a7a5",
+                            ConcurrencyStamp = "c570ae85-6a19-4be7-ab3e-8e4b82cb8e37",
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEENsISIuEOR1oTzrBj/ocOHU0vrnfa2hjIIooqDIQLxjqqM3i+CsYQKYiGkpHP6UcA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEIiwULUsNKqd2rIkSGvnri1Nq62qPYa3FfgRgo7z45O9sBh+S15nAN3IaQTPwUxmPw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "d8ba6a91-eb6f-4507-aed2-434719939901",
+                            SecurityStamp = "06874f9d-27a0-49dd-96b1-f22b15aa490f",
                             TwoFactorEnabled = false,
                             UserName = "admin@gmail.com"
                         });
@@ -758,7 +758,8 @@ namespace Learning_Site.Migrations
                 {
                     b.HasOne("Learning_Site.Models.Entities.SiteUser", "SiteUser")
                         .WithOne("SiteDictionary")
-                        .HasForeignKey("Learning_Site.Models.Entities.SiteDictionary", "SiteUserId");
+                        .HasForeignKey("Learning_Site.Models.Entities.SiteDictionary", "SiteUserId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("SiteUser");
                 });

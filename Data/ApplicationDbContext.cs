@@ -35,6 +35,7 @@ namespace Learning_Site.Data
                 .WithOne(u => u.Creator)
                 .HasForeignKey(u => u.CreatorId)
                 .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<SiteUser>().HasOne<SiteDictionary>(u=>u.SiteDictionary).WithOne(d=>d.SiteUser).OnDelete(DeleteBehavior.Cascade);
         }
 
         private void CreateEntities(ModelBuilder builder)

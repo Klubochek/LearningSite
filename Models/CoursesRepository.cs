@@ -18,12 +18,12 @@ namespace Learning_Site.Models
         }
         public List<Course> GetSubscribedUserCourses(SiteUser siteUser)
         {
-            return _context.Courses.OrderBy(c => c.CourseId).Include(c => c.SiteUsers).Where(c => c.SiteUsers.Contains(siteUser)).ToList();
+            return _context.Courses.OrderBy(c => c.CourseId).Include(c => c.SiteUsers).Include(c=>c.Creator).Where(c => c.SiteUsers.Contains(siteUser)).ToList();
         }
 
         public List<Course> GetCreatedUserCourses(SiteUser siteUser)
         {
-            return _context.Courses.OrderBy(c => c.CourseId).Include(c => c.SiteUsers).Where(c => c.Creator == siteUser).ToList();
+            return _context.Courses.OrderBy(c => c.CourseId).Include(c => c.Creator).Include(c => c.SiteUsers).Where(c => c.Creator == siteUser).ToList();
         }
 
         public List<Course> GetCoursesListByKeyword(string keyword)

@@ -193,7 +193,8 @@ namespace Learning_Site.Migrations
                         name: "FK_SiteDictionary_AspNetUsers_SiteUserId",
                         column: x => x.SiteUserId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -339,7 +340,7 @@ namespace Learning_Site.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Discriminator", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "32350725-439a-4b52-a2c4-181287146cbc", 0, "727a34a1-dc06-4813-bd79-86fbc161a7a5", "SiteUser", "admin@gmail.com", true, false, null, null, "ADMIN@GMAIL.COM", "AQAAAAEAACcQAAAAEENsISIuEOR1oTzrBj/ocOHU0vrnfa2hjIIooqDIQLxjqqM3i+CsYQKYiGkpHP6UcA==", null, false, "d8ba6a91-eb6f-4507-aed2-434719939901", false, "admin@gmail.com" });
+                values: new object[] { "32350725-439a-4b52-a2c4-181287146cbc", 0, "c570ae85-6a19-4be7-ab3e-8e4b82cb8e37", "SiteUser", "admin@gmail.com", true, false, null, null, "ADMIN@GMAIL.COM", "AQAAAAEAACcQAAAAEIiwULUsNKqd2rIkSGvnri1Nq62qPYa3FfgRgo7z45O9sBh+S15nAN3IaQTPwUxmPw==", null, false, "06874f9d-27a0-49dd-96b1-f22b15aa490f", false, "admin@gmail.com" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
